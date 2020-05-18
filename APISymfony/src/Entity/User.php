@@ -2,15 +2,17 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @UniqueEntity(fields={"email"},message="Il existe déjà un compte avec cette adresse mail")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -107,7 +109,7 @@ class User
     {
         return (string) $this->email;
     }
-    
+
     public function getRoles(): ?array
     {
         $roles = $this->roles;
