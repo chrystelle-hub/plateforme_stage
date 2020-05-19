@@ -1,0 +1,1147 @@
+body {
+background-color: white;
+font-family: Arial;
+font-size: 100%;
+margin: 0;
+padding: 0;
+}
+
+                        /* HEADER */
+.containerHeader {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.titreLogo{
+   max-height: 80px;
+   display: flex;
+}
+
+.logoSite{
+   max-height: 100px;
+    max-width: 90px;
+   display: flex;
+   align-content: center;
+   align-items: center;
+   margin-left: 10px;
+}
+
+.logoSite img{
+    width: 100%;
+    height: 100%;
+}
+
+.logoHeader{
+   max-height: 90%;
+}
+
+.titreSite{
+   display: flex;
+    flex-direction: column;
+   align-content: center;
+   align-items: center;
+    margin-left: 10px;
+}
+
+.titreGamma{
+    width: 100%;
+    font-size: 40px;
+}
+
+.titreStage{
+    margin-top: -15px;
+    width: 100%;
+    font-size: 25px;
+    text-align: right;
+}
+.navHeader{
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+}
+header {
+    padding : 10px;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
+
+
+}
+
+                            /* NAVIGATION */
+
+.boutonNav{
+   background-color:#87bb34;
+    border-radius: 5%;
+   display:inline-block;
+   cursor:pointer;
+   color:#ffffff;
+   font-size:16px;
+   padding:10px 20px;
+   text-decoration:none;
+   text-shadow:0px 1px 0px #2f6627;
+   margin-left: 10px;
+}
+
+.boutonNav:hover {
+   color:#ffffff;
+   text-decoration:none;
+   background-color:#5cbf2a;
+}.boutonNav:active {
+    color:#ffffff;
+    text-decoration:none;
+    position:relative;
+    top:1px;
+}
+
+                        /* Bouton INDEX */
+
+.formAccueil{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.btnInscrire, .btnConnexion {
+   margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+   display:inline-block;
+   cursor:pointer;
+   margin-bottom: 5px;
+   color:#ffffff;
+   font-size:20px;
+   padding:13px 32px;
+   text-decoration : none;
+   text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+
+.btnInscrire:hover , .btnConnexion:hover{
+   color:#ffffff;
+   text-decoration:none;
+   background-color:#5cbf2a;
+}
+
+
+                        /* INSCRIPTION */
+
+
+.containerInscription, containerConnexion{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titrePage{
+    display: flex;
+    font-size: 50px;
+    margin: 30px;
+    justify-content: center;
+}
+
+.formulaire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.formInscription, .formConnexion, .modifProfil{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.formInscription div, .formConnexion div, .modifProfil div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin : 5px;
+}
+
+.formInscription div input, .formConnexion div input, .modifProfil div input{
+    width: 50%;
+}
+
+.formInscription div textarea, .modifProfil div textarea{
+    width: 50%;
+}
+.formInscription div label, .formConnexion div label, .modifProfil div label{
+    width: 50%;
+}
+
+.btnInscription, .btnFormConnexion{
+    display: flex;
+    justify-content: center !important ;
+}
+.btnInscription button, .btnFormConnexion button{
+    margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 10px 25px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+.btnInscription button:hover, .btnFormConnexion button:hover {
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+
+.catchphrase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45px;
+}
+
+                        /* AFFICHAGE PROFIL STAGIAIRE*/
+
+.containerProfil{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.containerStagiaire {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profilAffichage{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profilAffichage div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin : 5px;
+}
+
+.btnModifProfil{
+    margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 10px 25px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+
+.btnModifProfil:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+
+.apprenantDetail{
+    width: 100%;
+}
+.ficheApprenant{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profilApprenant{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profilApprenant div{
+    margin-bottom: 10px;
+}
+
+.candidatureApprenant {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.candidatureApprenant div{
+    margin-bottom: 20px;
+}
+
+
+.retour{
+    margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 10px 25px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+
+.retour:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+
+                        /* APPRENANTS A VALIDER */
+
+.avalid{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.avalid .retour{
+
+}
+.avalid button{
+    margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 7px 15px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+
+.retour:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+                        /* AFFICHAGE PROFIL FORMATEUR  */
+
+.containerFormateur{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    width: 100%;
+}
+
+.dashForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashFormList ul{
+    width: 100%;
+    list-style-type: none;
+}
+
+.dashFormList ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dashFormList{
+    width: 100%;
+}
+
+.aValider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnStagiaireValidation{
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 10px 25px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+
+.btnStagiaireValidation:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+.btnPlusProfil {
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 6px 16px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+.btnPlusProfil:hover {
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+.btnPlusProfil:active {
+    position: relative;
+    top: 1px;
+}
+                        /* MODIFICATION PROFIL */
+
+.aTrouveStage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aTrouveStage_reponse{
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around!important;
+
+}
+.aTrouveStage_oui, .aTrouveStage_non {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.aTrouveStage_oui label {
+    margin-bottom : 0px;
+    padding-left : 10px;
+}
+
+.aTrouveStage_non label{
+    margin-bottom : 0px;
+    padding-left : 10px;
+}
+
+.btnProfilValider{
+    margin-top: 20px;
+    background-color:#87bb34;
+    border-radius: 5%;
+    display:inline-block;
+    cursor:pointer;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:16px;
+    padding: 10px 25px;
+    text-decoration : none;
+    text-shadow:0px 1px 0px #3d768a;
+    border : none;
+}
+.btnProfilValider:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#5cbf2a;
+}
+
+.containerFiche {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-evenly
+}
+
+/**Page profil**/
+.contenair_historique{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne_histo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px grey solid;
+    padding: 10px;
+}
+.ligne_histo div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ligne_histo div label{
+    font-size: 12px;
+    font-family: Verdana;
+    color: grey;
+    padding: 3px;
+}
+.ligne_histo div h3{
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+.contenair_deco{
+    width: 2% !important;
+}
+.statut_histo{
+    display: flex;
+    align-items: center;
+    flex-direction: initial !important;
+}
+.statut_histo div{
+    width: 40%;
+}
+.statut_histo i.vert{
+    color: #34BC05;
+}
+.statut_histo i.orange{
+    color: #F5B355;
+}
+.decor_histo{
+    height: 50px;
+    width: 50%;
+    background-color: #87bb34;
+    transition: 0.2s;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.05);
+    border-radius: 7%;
+    align-items: flex-end !important;
+}
+.ligne_histo:hover .decor_histo{
+    width: 40% !important;
+    transition: 0.2s;
+}
+.ligne_histo:hover{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #F5F5F5;
+    transition: 0.2s;
+}
+/**PAGE RECHERCHE**/
+.contenair_recherche{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.barre_recherche{
+    border: 1px grey solid;
+    margin-top: 50px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.barre_recherche i {
+    font-size: 25px;
+    padding: 5px;
+    color: #00a0e0;
+}
+input[type ="search"]{
+    -webkit-appearance: none;
+    border: none;
+    width: 100%;
+    font-family: Bahnschrift;
+    padding: 10px;
+    font-size: 20px;
+}
+input[type="search"]::placeholder{
+    color: #A9A9A9;
+}
+select{
+    border: 1px gray solid;
+    appearance: none;
+    width: 50%;
+    margin: 10px;
+}
+input[type="search"]:focus{
+    outline: none;
+}
+.button_inscri{
+    background:#44a33d;
+    width: 250px;
+    margin:5px
+}
+.contenair_principal_recherche{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ECECEC;
+}
+.barre_recherche{
+    display: flex;
+    background-color: white;
+}
+.form_recherche{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.preference_select{
+    display: flex;
+    justify-content: center;
+}
+.select_edit{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
+    color: #8F8F8F;
+}
+.input_search{
+    width: 50% !important;
+    margin: 10px;
+}
+.filtre{
+    display: flex;
+    padding: 10px;
+    width: 50%;
+}
+.entreprise{
+    min-width: 390px;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    margin: 20px;
+}
+.name_entreprise{
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-family: Bahnschrift;
+    display: flex;
+    justify-content: space-between;
+}
+.name_entreprise i {
+    color: #00a0e0;
+}
+.contenair_entreprise{
+    padding-top: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.connexion_formulaire{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.connexion_formulaire:before, .connexion_formulaire:after {
+    content:'';
+    display:inline-block;
+    vertical-align: middle;
+    width: 7rem;
+    height: 1px;
+    background: #ccc;
+}
+.connexion_formulaire i {
+    font-size: 20px;
+    padding: 6px;
+    color: #00a0e0;
+}
+.connexion_formulaire:before {
+    margin-right: .3rem }
+.connexion_formulaire:after {
+    margin-left: .3rem }
+.stat_contenair{
+    margin: 30px;
+    display: flex;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.stat_entreprise{
+    background-color: darkgray;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+.stat_entreprise  i{
+
+}
+.desc_entreprise{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.desc_entreprise label{
+    font-style: italic;
+    color: #8F8F8F;
+    font-family: Verdana;
+    padding: 5px;
+}
+.description_contenair{
+    width: 75%;
+    text-align: justify;
+    padding: 20px;
+    font-family: Verdana;
+    font-style: italic;
+}
+.contenair_stat_entre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Bahnschrift;
+}
+.contenair_stat_entre a {
+    padding: 5px;
+}
+.entreprise:hover .name_entreprise i {
+    color: #87bb34;
+}
+/**PAGE ENTREPRISE**/
+#entreprise_supp .mes_infos
+{
+    width:60vw !important;
+    margin-left:20%;
+}
+
+.entreprise_contenair {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.entreprise_contenair .entreprise{
+    width: 27%;
+}
+.stat_classique{
+    height: 80px;
+    width: 80px;
+    background-color: #B4B4B4;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-size: 27px;
+    font-family: Bahnschrift;
+    border: 7px white solid;
+}
+.stat_classique p{
+    font-size:20px!important;
+}
+.contenair_stat_plus{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -81px;
+    z-index: 11;
+}
+.stat_contenaire{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 40px;
+}
+.stat_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+.stat_1 label{
+    padding: 10px;
+    font-size: 13px;
+    font-family: Verdana;
+}
+.ligne_contact{
+    padding: 15px;
+    border-bottom: 1px #C0C0C0 solid;
+}
+.ligne_contact:hover{
+    background-color: #EFEFEF;
+}
+.name_ligne_contact{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: Verdana;
+}
+.name_ligne_contact i {
+    color: #00a0e0;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.name_ligne_contact h3{
+    width: 40%;
+
+}
+.name_ligne_contact label{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.info_ligne_contact{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.icone_user li{
+    font-size: 20px;
+    padding: 5px;
+    color: #e3007e;
+}
+.icone_text li{
+    font-size: 14px;
+    padding: 8px;
+    font-family: Verdana;
+}
+.cache_info{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.ouver_info{
+    position: initial;
+    visibility: initial;
+    opacity: 1;
+    margin-top: 0px;
+    transition: 0.2s;
+}
+.ligne_contact:hover .cache_info{
+    position: initial;
+    visibility: initial;
+    opacity: 1;
+    margin-top: 0px;
+    transition: 0.2s;
+}
+.photo_2{
+    background: url("../image/fond_enter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.info_entreprise{
+    position: absolute;
+
+}
+
+.contenair_relative .info_entreprise{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Verdana;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.entreprise_with{
+    width: 30%;
+    display: flex;
+    font-size: 30px;
+    margin: 5px;
+    flex-direction: column;
+
+}
+.entreprise_with label{
+    width: 80%;
+   padding: 5px;
+    font-size: 13px;
+    color: #E9E9E9;
+}
+.option_button{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.option_button div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.postuler{
+    background-color: #78A431;
+    width: 25%;
+    height: 100%;
+    padding: 15px;
+    opacity: 0.5;
+    border-left: 2px white solid;
+    border-right: 2px white solid;
+    transition: 0.5s;
+}
+.contact_form {
+    background-color: #78A431;
+    width: 25%;
+    height: 100%;
+    padding: 15px;
+    opacity: 0.5;
+    border-left: 2px white solid;
+    border-right: 2px white solid;
+    transition: 0.5s;
+}
+.entreprise_form {
+    background-color: #78A431;
+    width: 25%;
+    height: 100%;
+    padding: 15px;
+    opacity: 0.5;
+    border-left: 2px white solid;
+    border-right: 2px white solid;
+    transition: 0.5s;
+}
+.entreprise_form:hover{
+    font-size: 23px;
+    width: 35%;
+    opacity: 1;
+    background-color: #87bb34;
+    transition: 0.5s;
+}
+.contact_form:hover{
+    font-size: 23px;
+    background-color: #87bb34;
+    width: 35%;
+    opacity: 1;
+    transition: 0.5s;
+}
+.postuler:hover{
+    font-size: 23px;
+    background-color: #87bb34;
+    width: 35%;
+    transition: 0.5s;
+    opacity: 1;
+}
+.info_sup_enter{
+    display: flex;
+}
+.info_sup_enter div {
+    padding: 15px;
+    margin-right: 30px;
+}
+.info_cool{
+    border-radius: 0%;
+    background-color: #00a0e0;
+    opacity: 0.8;
+    padding-right: 15px;
+}
+.info_cool2 a {
+    font-size: 20px;
+    color: white;
+    font-family: Verdana;
+}
+.place_entre{
+    display: flex;
+    flex-direction: initial;
+    align-items: initial;
+}
+.button_entreprise{
+    width: 50%;
+}
+.button_entreprise div{
+    padding: 18px;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
+    width: 70%;
+    font-family: Verdana;
+    font-size: 14px;
+}
+.button_entreprise div:hover{
+    background-color: #87bb34;
+    color: white;
+}
+.info_entreprise_ul{
+    display: flex;
+    padding: 15px;
+    width: 50%;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
+}
+.info_entreprise_ul li{
+    padding: 10px;
+
+}
+.label_info{
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+.chiffre_info{
+    font-family: Verdana;
+    font-size: 16px;
+    color: #727272;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.other_color{
+    background-color: #658D27;
+    color: white;
+}
+.cache_entreprise{
+    margin-left: 30px;
+    display: none;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.ouvert_entreprise{
+    margin-left: 0px;
+    display: flex;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    font-size: 14px;
+}
+/** ------------------------------------------------Admin View */
+
+.contenair_admin{
+    margin-top: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.user_activ{
+    width: 100%;
+    max-height: 530px;
+    overflow-y: auto;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.user div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.user div label{
+    font-family: Verdana;
+    font-size: 12px;
+    color: #8F8F8F;
+}
+.user div p{
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+}
+.valide{
+    padding:12px 0 12px 0;
+    font:bold 13px Arial;
+    background:#87bb34;
+    color:#fff;
+    border-radius:1px;
+    width:150px;
+    font-size: 13px;
+    border:none
+}
+.pas_valide{
+    background-color: #D32C2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px !important;
+    color: white;
+}
+.pas_valide:hover{
+    background-color: #A62828 ;
+}
+.valide:hover{
+    background-color: #00a0e0;
+}
+.div_accept{
+    display: flex;
+    flex-direction: initial !important;
+    justify-content: space-around;
+    width: 15% !important;
+}
+.titre_admin{
+    width: 33%;
+    margin-top: 50px;
+}
+.taille_inscri{
+    width: 20%;
+}
+.titre_admin h2{
+    font-size: 22px;
+    font-family: Verdana;
+    color: #837F7F;
+    border-bottom: 1px #E4E4E4 solid;
+    padding: 5px;
+}
+.column_admin{
+    display: flex;
+    flex-direction: column;
+}
+.admin_search input{
+    font-size: 15px;
+    height: 30px;
+}
+.admin_search{
+    margin-top: 0px;
+}
+.contenair_formulaire_cont{
+    margin-top: 50px;
+}
+.liste_formateur{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.liste_formateur button{
+    width: 30%;
+    background-color: #87bb34;
+}
+.formateur_align{
+    display: flex;
+    flex-direction: column;
+}
+.nom_form label{
+    font-size: 15px;
+    font-family: Bahnschrift;
+}
+.nom_form p{
+    font-size: 15px;
+    font-family: Bahnschrift;
+    color: grey;
+}
+.contenair_formateur_form{
+    height: 225px;
+    overflow-y: auto;
+}
