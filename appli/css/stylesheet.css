@@ -1,9 +1,17 @@
+html, body {
+	height: 100%;
+	margin: 0; 
+	padding: 0;
+}
+
 body {
 background-color: white;
 font-family: Arial;
 font-size: 100%;
 margin: 0;
 padding: 0;
+display : table;
+width: 100%;
 }
 
                         /* HEADER */
@@ -756,7 +764,7 @@ input[type="search"]:focus{
 }
 .contenair_stat_plus{
     display: flex;
-    width: 45%;
+    /*width: 45%;*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -893,16 +901,7 @@ input[type="search"]:focus{
     justify-content: center;
     font-size: 15px;
 }
-.postuler{
-    background-color: #78A431;
-    width: 25%;
-    height: 100%;
-    padding: 15px;
-    opacity: 0.5;
-    border-left: 2px white solid;
-    border-right: 2px white solid;
-    transition: 0.5s;
-}
+
 .contact_form {
     background-color: #78A431;
     width: 25%;
@@ -937,13 +936,7 @@ input[type="search"]:focus{
     opacity: 1;
     transition: 0.5s;
 }
-.postuler:hover{
-    font-size: 23px;
-    background-color: #87bb34;
-    width: 35%;
-    transition: 0.5s;
-    opacity: 1;
-}
+
 .info_sup_enter{
     display: flex;
 }
@@ -1001,7 +994,9 @@ input[type="search"]:focus{
     color: #727272;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    list-style: none;
+
 }
 .other_color{
     background-color: #658D27;
@@ -1144,4 +1139,105 @@ p{
 .contenair_formateur_form{
     height: 225px;
     overflow-y: auto;
+}
+
+/**Form Ajout Contact**/
+
+.rien_form{
+    width: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.super_form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+
+}
+.colum_candidat{
+    display: flex;
+    flex-direction: column;
+}
+.add_candidature{
+    font-family: Bahnschrift;
+    color: #2b2b2b;
+}
+.colum_candidat select{
+    width: 100%;
+    margin: 0px;
+    margin-top: 5px;
+    font-family: Verdana;
+}
+.add_candidature div input{
+    margin: 0px;
+    width: 100%;
+    margin-top: 5px;
+    font-family: Verdana;
+}
+.add_candidature div{
+    margin-top: 10px;
+}
+.bouton_form{
+    width: 100%;
+}
+.bouton_form input{
+    margin: 0px;
+    margin-top: 15px;
+    font:bold 13px Arial;
+    background:#00a0e0;
+    color:#fff;
+    border-radius:1px;
+    width: 100%;
+    font-size: 13px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 37px;
+}
+.impulse{
+    animation: jacky 3s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.impulse:hover{
+    animation: jacky2 2s infinite;
+}
+
+.menu_cache_entreprise{
+    z-index: 150;
+    margin-left: 5px;
+    font-size: 25px;
+    position: fixed;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #87bb34;
+    color: white;
+    DISPLAY: flex;
+    border-radius: 3%;
+    display: none;
+}
+.option2{
+    width: 100%;
+    justify-content: space-around;
+}
+.salut_bouton{
+    border: none;
+    opacity: 1;
+    background: transparent;
+    font-family: verdana;
+}
+.boitie_cache{
+    position: absolute;
+    margin-left: -1000px;
+    transition: 0.5s;
+}
+.boitie_ouvert{
+    position: initial;
+    margin-left: 0px;
+    transition: 0.5s;
 }
