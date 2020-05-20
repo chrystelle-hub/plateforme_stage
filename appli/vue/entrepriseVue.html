@@ -1,0 +1,116 @@
+<div style="display: flex;">
+    <div  style="width: 20%; margin:20px;">
+        <h2>Candidatures</h2>
+        <label>Moyens</label>
+        <div style="display: flex;">
+
+            <ul class="label_info">
+                <li>Lettre</li>
+                <li>Email</li>
+                <li>Telephone</li>
+                <li>sur place</li>
+            </ul>
+            <ul class="chiffre_info" style="padding-left: 64%;">
+                <li id="CandidatureLettre"></li>
+                <li id="CandidatureEmail"></li>
+                <li id="CandidatureTelephone"></li>
+                <li id="CandidaturePlace"></li>
+            </ul>
+        </div>
+        <label>Réponses</label>
+        <div style="display: flex;">
+           
+            <ul class="label_info" style="list-style:none;">
+                <li>En attente</li>
+                <li>Entretien en attente de réponse</li>
+                <li>Refusé après entretien</li>
+                <li>Refusé sans entretien</li>
+                <li>Accepté</li>
+            </ul>
+            <ul class="chiffre_info" style="list-style:none;">
+                <li id="Candidature1"></li>
+                <li id="Candidature2"></li>
+                <li id="Candidature3"></li>
+                <li id="Candidature4"></li>
+                <li id="Candidature5"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="width: 60%;"> 
+        <div style="width: 100%;margin-bottom: 100px;margin-left: 50px;margin-top:50px;">
+            <h2 id="nomEntreprise"></h2>
+            <p id="adresse"></p>
+            <p id="mailEntreprise"></p>
+            <p id="telephoneEntreprise"></p>
+            <p id="secteur">Secteur d'activité : </p>
+        </div>
+        
+            <div id="deux" class="contenair_stat_plus" style="margin-right:100px;">
+                <div class="stat_contenaire">
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="nb"></p>
+                        </div>
+                        <label>Candidatures</label>
+                    </div>
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="taux"></p>
+                        </div>
+                        <label>Taux d'acceptation</label>
+                    </div>
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="delai"></p>
+                        </div>
+                        <label>Delai moyen de réponse (semaines)</label>
+                    </div>
+                </div>
+        
+                <div class="stat_contenaire">
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="accept"></p>
+                        </div>
+                        <label>Candidatures acceptées</label>
+                    </div>
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="attente"></p>
+                        </div>
+                        <label>Candidature en attente</label>
+                    </div>
+                    <div class="stat_1">
+                        <div class="stat_classique">
+                            <p id="refus"></p>
+                        </div>
+                        <label>Candidatures refusées</label>
+                    </div>
+                </div>
+            </div>
+    
+        
+            <h3>formation</h3>
+            <div id="listeFormations" class="contenair_user anti_box">
+            </div>
+            <h3>infos Candidatures par formation</h3>
+            <div id="candidatureFormation" class="contenair_user anti_box">
+            </div>
+            <h3>historique actions</h3>
+            <div id="historique" class="contenair_user anti_box">
+            </div>
+        
+    </div>
+
+    <div style="width: 20%;">
+        <div class="btn-group-vertical" role="group" aria-label="Basic example" style="margin: 50px;">
+            <button class="btn btn-info" id="add_contact">Ajouter contact</button>
+            <button class="btn btn-info" id="add_candidature">postuler</button>
+            <button class="btn btn-info" id="modif_entreprise">modifier entreprise</button>
+        </div>
+
+        <h2>contact</h2>
+        <div id="contact"></div>
+    </div>
+</div>
