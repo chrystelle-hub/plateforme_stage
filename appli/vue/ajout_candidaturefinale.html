@@ -104,26 +104,32 @@ $(document).ready(function()
 					{
 						if(data['erreur']['moyen'])
 						{
+							$('#erreurMode').addClass('alert alert-danger');
 							$('#erreurMode').text(data['erreur']['moyen'][0]);
 						}
 						if(data['erreur']['etat'])
 						{
+							$('#erreurEtat').addClass('alert alert-danger');
 							$('#erreurEtat').text(data['erreur']['etat'][0]);
 						}
 						if(data['erreur']['reponse'])
 						{
+							$('#erreurReponse').addClass('alert alert-danger');
 							$('#erreurReponse').text(data['erreur']['reponse'][0]);
 						}
 						if(data['erreur']['delai_reponse'])
 						{
+							$('#erreurDelai').addClass('alert alert-danger');
 							$('#erreurDelai').text(data['erreur']['delai_reponse'][0]);
 						}
 						if(data['erreur']['formation'])
 						{
+							$('#erreurFormation').addClass('alert alert-danger');
 							$('#erreurFormation').text(data['erreur']['formation'][0]);
 						}
 						if(data['erreur']['dateEnvoieCandidature'])
 						{
+							$('#erreurDate').addClass('alert alert-danger');
 							$('#erreurDate').text(data['erreur']['dateEnvoieCandidature'][0]);
 						}
 					}

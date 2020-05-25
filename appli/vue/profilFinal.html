@@ -97,7 +97,7 @@ $(document).ready(function()
 						if(data['connexion'])
 						{
 							let url = "adminfinale.html?token="+token;
-							var html = '<button class="button_connect button_inscription" id="role_admin"><a href='+url+'>Panneau de contr\u00f4le formateur</a></button>'
+							var html = '<button class="btn btn-lg btn-info" id="role_admin" style="margin:10px;"><a href='+url+' style="text-decoration: none;color:white;">Tableau de bord formateur</a></button>'
 							$( ".historique" ).html(html);
 							admin = true;
 						} 

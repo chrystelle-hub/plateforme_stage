@@ -84,7 +84,7 @@
 
                 </div>
             </div>
-        </div>-->
+        </div>
         <div class="container">
             <div class="historique">
                 
@@ -103,4 +103,80 @@
             </div>
            
     </body>
-</html>
+</html>-->
+<div class="contenair_historique">
+    <div class="historique">
+        
+    </div>
+</div>
+
+    <div class="mes_infos_profil">
+        <h2>Mes informations</h2>
+        <div class="contenair_user">
+
+            <div class="place_edit">
+                <div id="menu_1" class="user_info ouvert_user">
+                    <div class="parti_1">
+                        <ul>
+                            <li>Nom</li>
+                            <li>Prenom</li>
+                            <li>Email</li>
+                            <li>Statut</li>
+                            <li>formation</li>
+                        </ul>
+                    </div>
+                    <div class="parti_2">
+                        <ul>
+                            <li id="nom"></li>
+                            <li id="prenom"></li>
+                            <li id="email"></li>
+                            <li id="statut"></li>
+                            <li id="formation"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id ="menu_2" class="form_info cache_menu2">
+                    <div class="form-group">
+                    <input id="nomModif" class="form-control" type="text" placeholder="Nom...">
+                    <input id="prenomModif" class="form-control" type="text" placeholder="Prénom...">
+                    <input id="pwdModif" class="form-control" type="password" placeholder="Password...">
+                    <button id="edit" class="btn btn-light btn-block ml-1" style="background-color: #e3007e;color:white">Enregistrer</button>
+                </div>
+                </div>
+            </div>
+            <div class="buton_profil">
+                <button id="buton_edit_js" class="btn btn-info">Modifier mon profil <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        voletProfil = true;
+    
+        function ouvertureMenuSetting(){
+    
+            if(voletProfil){
+                voletProfil = false;
+                document.getElementById("menu_1").classList.remove("ouvert_user");
+                document.getElementById("menu_1").classList.add("cache_user");
+                document.getElementById("menu_2").classList.remove("cache_menu2");
+                document.getElementById("menu_2").classList.add("ferme_cache");
+                document.getElementById("buton_edit_js").textContent = "retour";
+            }
+            else{
+                voletProfil = true;
+                document.getElementById("menu_1").classList.remove("cache_user");
+                document.getElementById("menu_1").classList.add("ouvert_user");
+                document.getElementById("menu_2").classList.remove("ferme_cache");
+                document.getElementById("menu_2").classList.add("cache_menu2");
+                document.getElementById("buton_edit_js").textContent = "Modifier mon profil"
+            }
+        }
+    
+    
+        var varFermetureSetting = document.getElementById("buton_edit_js");
+        varFermetureSetting.addEventListener("click",ouvertureMenuSetting);
+    
+    </script>

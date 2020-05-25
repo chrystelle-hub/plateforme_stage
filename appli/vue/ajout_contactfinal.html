@@ -85,22 +85,27 @@ $(document).ready(function()
 					{
 						if(data['erreur']['email'])
 						{
+							$('#erreurEmail').addClass("alert alert-danger");
 							$('#erreurEmail').text(data['erreur']['email'][0]);
 						}
 						if(data['erreur']['nom'])
 						{
+							$('#erreurNom').addClass("alert alert-danger");
 							$('#erreurNom').text(data['erreur']['nom'][0]);
 						}
 						if(data['erreur']['fonction'])
 						{
+							$('#erreurFonction').addClass("alert alert-danger");
 							$('#erreurFonction').text(data['erreur']['fonction'][0]);
 						}
 						if(data['erreur']['linkedin'])
 						{
+							$('#erreurLinkedin').addClass("alert alert-danger");
 							$('#erreurLinkedin').text(data['erreur']['linkedin'][0]);
 						}
 						if(data['erreur']['tel'])
 						{
+							$('#erreurTel').addClass("alert alert-danger");
 							$('#erreurTel').text(data['erreur']['tel'][0]);
 						}
 					}
@@ -108,7 +113,7 @@ $(document).ready(function()
 				})
      	
      		});
-     	$("#footer").load("footer.html");
+     	//$("#footer").load("footer.html");
    	});
 });
  
