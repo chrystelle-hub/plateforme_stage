@@ -14,7 +14,8 @@ display : table;
 width: 100%;
 }
 
-                        /* HEADER */
+/* HEADER */
+
 .containerHeader {
    display: flex;
    justify-content: space-between;
@@ -71,11 +72,9 @@ width: 100%;
 header {
     padding : 10px;
     box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
-
-
 }
 
-                            /* NAVIGATION */
+/* NAVIGATION */
 
 .boutonNav{
    background-color:#87bb34;
@@ -101,7 +100,7 @@ header {
     top:1px;
 }
 
-                        /* Bouton INDEX */
+/* Bouton INDEX */
 
 .formAccueil{
    display: flex;
@@ -131,10 +130,10 @@ header {
 }
 
 
-                        /* INSCRIPTION */
+/* INSCRIPTION */
 
 
-.containerInscription, containerConnexion{
+.containerInscription, .containerConnexion{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -218,274 +217,8 @@ header {
     font-size: 45px;
 }
 
-                        /* AFFICHAGE PROFIL STAGIAIRE*/
-
-.containerProfil{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.containerStagiaire {
-    display: flex;
-    justify-content: space-around;
-}
-
-.profilAffichage{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.profilAffichage div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin : 5px;
-}
-
-.btnModifProfil{
-    margin-top: 20px;
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 10px 25px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-
-.btnModifProfil:hover{
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-
-.apprenantDetail{
-    width: 100%;
-}
-.ficheApprenant{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.profilApprenant{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.profilApprenant div{
-    margin-bottom: 10px;
-}
-
-.candidatureApprenant {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.candidatureApprenant div{
-    margin-bottom: 20px;
-}
-
-
-.retour{
-    margin-top: 20px;
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 10px 25px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-
-.retour:hover{
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-
-                        /* APPRENANTS A VALIDER */
-
-.avalid{
-    margin-left: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.avalid .retour{
-
-}
-.avalid button{
-    margin-top: 20px;
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 7px 15px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-
-.retour:hover{
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-                        /* AFFICHAGE PROFIL FORMATEUR  */
-
-.containerFormateur{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around ;
-    width: 100%;
-}
-
-.dashForm{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dashFormList ul{
-    width: 100%;
-    list-style-type: none;
-}
-
-.dashFormList ul li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.dashFormList{
-    width: 100%;
-}
-
-.aValider{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.btnStagiaireValidation{
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 10px 25px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-
-.btnStagiaireValidation:hover{
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-.btnPlusProfil {
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 6px 16px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-.btnPlusProfil:hover {
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-.btnPlusProfil:active {
-    position: relative;
-    top: 1px;
-}
-                        /* MODIFICATION PROFIL */
-
-.aTrouveStage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aTrouveStage_reponse{
-    width: 100%;
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-around!important;
-
-}
-.aTrouveStage_oui, .aTrouveStage_non {
-    width: 30%;
-    display: flex;
-    align-items: center;
-}
-
-.aTrouveStage_oui label {
-    margin-bottom : 0px;
-    padding-left : 10px;
-}
-
-.aTrouveStage_non label{
-    margin-bottom : 0px;
-    padding-left : 10px;
-}
-
-.btnProfilValider{
-    margin-top: 20px;
-    background-color:#87bb34;
-    border-radius: 5%;
-    display:inline-block;
-    cursor:pointer;
-    margin-bottom: 5px;
-    color:#ffffff;
-    font-size:16px;
-    padding: 10px 25px;
-    text-decoration : none;
-    text-shadow:0px 1px 0px #3d768a;
-    border : none;
-}
-.btnProfilValider:hover{
-    color:#ffffff;
-    text-decoration:none;
-    background-color:#5cbf2a;
-}
-
-.containerFiche {
-   margin-top: 20px;
-   display: flex;
-   justify-content: space-evenly
-}
-
 /**Page profil**/
+
 .contenair_historique{
     margin-top: 30px;
     width: 100%;
@@ -493,6 +226,53 @@ header {
     justify-content: space-around;
 }
 
+.historique{
+    width: 50%;
+}
+
+.historique h2{
+    font-size: 22px;
+    font-family: Verdana;
+    color: #837F7F;
+    border-bottom: 1px #E4E4E4 solid;
+    padding: 5px;
+}
+
+.mes_infos_profil{
+    width: 20%;
+    margin-left: 25%;
+    margin-top: 30px;
+}
+
+.mes_infos_profil h2{
+    font-size: 22px;
+    font-family: Verdana;
+    color: #837F7F;
+    border-bottom: 1px #E4E4E4 solid;
+    padding: 5px;
+}
+
+.mes_infos{
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.mes_infos h2{
+    font-size: 22px;
+    font-family: Verdana;
+    color: #837F7F;
+    border-bottom: 1px #E4E4E4 solid;
+    padding: 5px;
+}
+.historique_contenair{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.16);
+    border-radius: 1%;
+    margin-top: 30px;
+    max-height: 284px;
+    overflow-y: scroll;
+}
 .ligne_histo{
     width: 100%;
     display: flex;
@@ -554,6 +334,98 @@ header {
     background-color: #F5F5F5;
     transition: 0.2s;
 }
+.contenair_user{
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.16);
+    margin-top: 30px ;
+}
+.red{
+    color: #F55555 !important;
+}
+.user_info{
+    display: flex;
+}
+.user_info li{
+    padding: 18px;
+}
+.parti_1 li{
+    border-bottom: 1px #E4E4E4 solid;
+}
+.parti_1{
+    font-size: 12px;
+    font-family: Verdana;
+    color: grey;
+    padding: 3px;
+}
+.parti_2{
+    font-family: Bahnschrift;
+    font-size: 13px;
+}
+.buton_profil{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.button_deco{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5%;
+    width : 150px;
+    background-color: #272727;
+    opacity: 0.6;
+}
+.place_edit{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.button_deco:hover{
+    background-color: #272727;
+    opacity: 0.8;
+}
+.cache_user{
+    margin-left: -30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.cache_menu2{
+    margin-left: -30px;
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+}
+.ferme_cache{
+    margin-left: 0px;
+    opacity: 1;
+    transition: 0.5s;
+    position: absolute;
+}
+.ouvert_user{
+    margin-left: 0px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.form_info input{
+    width: 100%;
+    margin: 6px;
+    padding: 10px;
+}
+.button_form_edit{
+    background-color: #e3007e;
+    margin-top: 24px;
+}
+.button_form_edit:hover{
+    background-color: #cf004b;
+}
+.form_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /**PAGE RECHERCHE**/
 .contenair_recherche{
     width: 100%;
@@ -609,6 +481,8 @@ input[type="search"]:focus{
 .barre_recherche{
     display: flex;
     background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
 }
 .form_recherche{
     width: 60%;
@@ -1030,10 +904,10 @@ p{
     padding: 10px;
     font-size: 14px;
 }
-/** ------------------------------------------------Admin View */
+/**Admin View */
 
 .contenair_admin{
-    margin-top: 105px;
+   
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -1082,6 +956,18 @@ p{
     font-size: 13px;
     border:none
 }
+
+.desactive{
+    padding:12px 0 12px 0;
+    font:bold 13px Arial;
+    background:#87bb34;
+    color:#fff;
+    border-radius:1px;
+    width:150px;
+    font-size: 13px;
+    border:none
+}
+
 .searchButton {
    
     padding:12px 0 12px 0;
@@ -1095,6 +981,10 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
     
+}
+
+.desactive:hover{
+    background-color: #00a0e0;
 }
 
 .pas_valide{
@@ -1204,7 +1094,6 @@ p{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 120px;
 
 }
 .colum_candidat{

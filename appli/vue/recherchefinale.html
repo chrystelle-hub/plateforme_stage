@@ -61,7 +61,8 @@ $(document).ready(function()
 							$('#erreur').text('');
 							if(data['entreprise'].length===0)
 							{
-								$(".contenair_entreprise").text("aucune entreprise ne correspond à la recherche");
+								$(".contenair_entreprise").addClass("alert alert-danger mt-2");
+								$(".contenair_entreprise").text("Aucune entreprise ne correspond \340 la recherche");
 							}	
 							else
 							{
@@ -111,7 +112,7 @@ $(document).ready(function()
 										                '</div>'+
 										                
 										            '</div>'+
-										             '<a href="entreprisefinale.html?token='+token+'&id='+element['id']+'"><button class="button_connect button_inscri"> Voir la fiche compl\350te </button></a>'+										
+										             '<a href="entreprisefinale.html?token='+token+'&id='+element['id']+'"><button class="btn btn-success mb-2"> Voir la fiche compl\350te </button></a>'+										
 										        '</div>';
 	     							$(html).appendTo($('.contenair_entreprise')) 
 								})
