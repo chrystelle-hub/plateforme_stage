@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../appli/css/stylesheet.css" media="all" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Afpa Stage</title>
+</head>
+
+<body>
+    <header>
+        <div class="containerHeader">
+            <div class="titreLogo">
+                <div class="logoSite" ><a href="Index.html" class="logoSite"> <img class ="logoHeader" src="../image/logo.png" a href="" alt="GammaLogo"></a></div>
+                
+            </div>
+       
+        </div>
+    </header>
+    
+    <div class="containerInscription" style="margin: 10px;">
+        <div class="titrePage">Inscription</div>
+        <div class="formulaire">
+          
+            <div id="form_inscription" class="form-group">
+                <span id="message"></span>
+                <div id="erreurNom"></div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="nom">Votre Nom</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" type="text" id="nom" name="nom" placeholder="Nom" required/>
+                    </div>
+                </div>
+
+                <div id="erreurPrenom"></div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="prenom">Votre Prénom</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" type="text" id="prenom" name="prenom" placeholder="Prénom" required/>
+                    </div>
+                </div>
+
+                <div id="erreurEmail"></div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for ="email">Votre Email</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Email" required/>
+                    </div>
+                </div>
+                
+                <div id="erreurPassword"></div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="password">Votre un mot de passe</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" type="password" id="password" name="password" placeholder="Mot de passe" required />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="password">Choisissez une formation</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="formation" placeholder="Choisissez une formation">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btnInscription"><button id="buttonInscription" >S'inscrire</button></div>
+
+            </div>
+
+            <div class="catchphrase">
+                <div>Trouvez le <b>stage</b></div>
+                <div>dont</div>
+                <div><b>vous</b> avez besoin !</div>
+            </div>
+        </div>
+    </div>
+  
+</body>
