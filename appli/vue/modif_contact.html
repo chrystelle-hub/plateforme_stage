@@ -1,40 +1,34 @@
-<div class="super_form">
+<div class="container"  style="width: 50%;">
+
     <div class="titre_admin rien_form">
         <h2>Modifier Contact</h2>
-        <div class="contenair_formulaire candidat_form">
-            <div class="formulaire_contact" method="POST" action="">
-                <span id="message"></span>
-                <div class="add_candidature">
-
-                    <div>
-                        <label for="fonction_contact">Fonction :</label>
-                        <input type="text" id="fonction_contact" name="fonction_contact" placeholder="Fonction" required>
-                        <span id="erreurFonction"></span>
-                    </div>
-
-                    <div class="colum_candidat">
-                        <label for="tel_contact">Tel :</label>
-                        <input type="text" id="tel_contact" name="tel_contact" placeholder="Téléphone">
-                        <span id="erreurTel"></span>
-                    </div>
-
-                    <div class="colum_candidat">
-                        <label for="email_contact">Email :</label>
-                        <input type="text" id="email_contact" name="email_contact" placeholder="Email">
-                        <span id="erreurEmail"></span>
-                    </div>
-
-                    <div class="colum_candidat">
-                        <label for="linkedin_contact">Linkedin :</label>
-                        <input type="text" id="linkedin_contact" name="linkedin_contact" placeholder="Linkedin">
-                        <span id="erreurLinkedin"></span>
-                    </div>
-
-                </div>
-                <div class="bouton_form">
-                    <input type="button" id="buttonAjout" class="button_add" value="Ajouter">
-                </div>
-            </div>
-        </div>
     </div>
+
+    <div id="erreurFonction"></div>
+    <div class="form-group">
+        <label for="fonction_contact">Fonction :</label>
+        <input class="form-control" type="text" id="fonction_contact" name="fonction_contact" placeholder="Fonction" required>
+    </div>
+
+    <div id="erreurFormation"></div>
+    <div class="form-group">
+        <div id="erreurTel"></div>
+        <label for="tel_contact">Téléphone :</label>
+        <input class="form-control" type="text" id="tel_contact" name="tel_contact" placeholder="Téléphone">
+    </div>
+
+    <div id="erreurEmail"></div>
+    <div class="form-group">
+        <label for="email_contact">Email :</label>
+        <input class="form-control" type="text" id="email_contact" name="email_contact" placeholder="Email">
+    </div>
+
+    <div id="erreurLinkedin"></div>
+    <div class="form-group">
+        <label for="linkedin_contact">Linkedin :</label>
+        <input class="form-control" type="text" id="linkedin_contact" name="linkedin_contact" placeholder="Linkedin">
+    </div>
+
+    <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Modifier</button>
+
 </div>
