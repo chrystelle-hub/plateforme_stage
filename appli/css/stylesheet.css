@@ -195,6 +195,16 @@ header {
     text-shadow:0px 1px 0px #3d768a;
     border : none;
 }
+.buttonFormateur {
+    padding: 12px 0 12px 0;
+    font: bold 13px Arial;
+    background: #87bb34;
+    color: #fff;
+    border-radius: 1px;
+    width: 80px;
+    font-size: 13px;
+    border: none;
+}
 .btnInscription button:hover, .btnFormConnexion button:hover {
     color:#ffffff;
     text-decoration:none;
@@ -1034,6 +1044,13 @@ p{
     overflow-y: auto;
     box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
 }
+
+.user_activ2{
+    width: 100%;
+    max-height: 530px;
+    overflow-y: auto;
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.10);
+}
 .user{
     display: flex;
     justify-content: space-between;
@@ -1065,6 +1082,21 @@ p{
     font-size: 13px;
     border:none
 }
+.searchButton {
+   
+    padding:12px 0 12px 0;
+    font:bold 13px Arial;
+    background:#87bb34;
+    color:#fff;
+    border-radius:1px;
+    width:150px;
+    font-size: 13px;
+    border:none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
 .pas_valide{
     background-color: #D32C2C;
     display: flex;
@@ -1140,7 +1172,26 @@ p{
     height: 225px;
     overflow-y: auto;
 }
+.form_inscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form_inscription input{
+    width: 90%;
+    height: 40px;
+    margin: 7px;
+}
 
+.titre_inscri{
+    color: black;
+    font-family: Verdana;
+    display: flex;
+    justify-content: center;
+    margin: 7px;
+    font-size: 22px;
+}
 /**Form Ajout Contact**/
 
 .rien_form{

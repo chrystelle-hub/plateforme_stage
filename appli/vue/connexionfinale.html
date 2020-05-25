@@ -61,11 +61,13 @@
 			{
 				if(data['message']==="activation")
 				{
-					$('#erreur').text("votre compte n'est pas encore activ\351");
+					$('#erreur').addClass("alert alert-danger");
+					$('#erreur').text("Votre compte n'est pas encore activ\351");
 				}
 				else
 				{
-					$('#erreur').text("login ou mot de passe incorrect");
+					$('#erreur').addClass("alert alert-danger");
+					$('#erreur').text("Adresse email ou mot de passe incorrect");
 				}
 				
 			}

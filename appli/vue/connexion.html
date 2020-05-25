@@ -16,10 +16,7 @@
         <div class="containerHeader">
             <div class="titreLogo">
                 <div class="logoSite" ><a href="Index.html" class="logoSite"> <img class ="logoHeader" src="./../image/logo.png" href="" alt="GammaLogo"></a></div>
-                <div class="titreSite" id="titre">
-                    <div class="titreGamma"><b>Afpa</b></div>
-                    <div class="titreStage">Stage</div>
-                </div>
+               
             </div>
            
         </div>
@@ -29,15 +26,20 @@
     <div class="containerConnexion">
         <div class="titrePage">Connexion</div>
         <div class="formulaire">
-            <div id="user_connexion" class="formConnexion">
-                <div>
-                    <span id="erreur"></span>
-                    <label>Votre Email</label>
-                    <input type="email" id="email" name="email" placeholder="E-mail" required/>
+            <div id="user_connexion" class="form-group">
+                <div id="erreur"></div>
+                <div class="form-group row">
+                    
+                    <label class="col-sm-6 col-form-label" >Votre Email</label>
+                    <div class="col-sm-6">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required/>
+                    </div>
                 </div>
-                <div>
-                    <label>Entrez votre mot de passe</label>
-                    <input type="password" id="password" name="password" placeholder="Mot de passe" required />
+                <div class="form-group row">
+                    <label class="col-sm-6 col-form-label" >Votre mot de passe</label>
+                    <div class="col-sm-6">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required />
+                    </div>
                 </div>
                 <div class="btnFormConnexion"><button id="seconnecter">Se connecter</button></div>
             </div>
