@@ -1181,3 +1181,57 @@ p{
     margin-left: 0px;
     transition: 0.5s;
 }
+
+/**Page candidature**/
+
+.mes_infos_candidature{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 30px;
+}
+
+.mes_infos_candidature h2{
+    font-size: 22px;
+    font-family: Verdana;
+    color: #837F7F;
+    border-bottom: 1px #E4E4E4 solid;
+    padding: 5px;
+}
+
+.candidature_info{
+    display: flex;
+    align-items: center;
+}
+
+.candidature_info li{
+    padding: 18px;
+}
+.contenair_user{
+    box-shadow: 0 10px 20px rgba(203,132,210,0.10), 0 6px 6px rgba(0,0,0,0.16);
+    margin-top: 30px ;
+}
+
+.parti_1 li{
+    border-bottom: 1px #E4E4E4 solid;
+}
+.parti_1{
+    font-size: 12px;
+    font-family: Verdana;
+    color: grey;
+    padding: 3px;
+}
+.parti_2{
+    font-family: Bahnschrift;
+    font-size: 13px;
+}
+
+ul.candidature_detail {
+    font-size: 18px;
+}
+
+.place_edit{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
