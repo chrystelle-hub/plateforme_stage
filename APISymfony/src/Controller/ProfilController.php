@@ -12,6 +12,8 @@ use App\Entity\Formation;
 use App\Repository\UserRepository;
 use Symfony\Component\Serializer\SerializerInterface;
 use App\Form\RegisterFormType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -29,7 +31,8 @@ class ProfilController extends AbstractController
         $response->setContent(json_encode([
             'nom'=>$user->getNom(),
             'prenom'=>$user->getPrenom(),
-            'mail'=>$user->getEmail()
+            'mail'=>$user->getEmail(),
+            'stage'=>$user->getStage(),
         ]));
         $response->headers->set('Access-Control-Allow-Origin', '*');
         return $response;
@@ -55,6 +58,11 @@ class ProfilController extends AbstractController
                     ]),
                 ]
             ));
+        $form->add('stage',NumberType::class,[
+            'invalid_message' =>'erreur',
+            'required'=>false
+        ]);
+        
         $values=$request->request->all();
         unset($values["X-AUTH-TOKEN"]);
          
@@ -150,6 +158,7 @@ class ProfilController extends AbstractController
             'prenom'=>$user->getPrenom(),
             'email'=>$user->getEmail(),
             'role'=>$user->getRoles(),
+            'stage'=>$user->getStage(),
             'formation'=>$formations_liste
         ];
         

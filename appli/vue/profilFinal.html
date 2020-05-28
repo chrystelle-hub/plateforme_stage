@@ -55,6 +55,7 @@ $(document).ready(function()
 					}).done(function(data){
 						$('#nomModif').val(data['nom']);
 						$('#prenomModif').val(data['prenom']);
+						$('#stageModif').val(data['stage']);
 					})
 					$('#edit').click(function(){
 						$.ajax({
@@ -64,12 +65,14 @@ $(document).ready(function()
 							"X-AUTH-TOKEN":token,
 							'nom':$('#nomModif').val(),
 							'prenom':$('#prenomModif').val(),
-							'password':$('#pwdModif').val()
+							'password':$('#pwdModif').val(),
+							'stage':$('#stageModif').val()
 						},
 						dataType: 'json',
 						crossDomain: true, 
 			
 					}).done(function(data){
+						console.log($('#stageModif').val())
 						if(data['modif']==="ok")
 						{
 							document.location.href='profilfinal.html?token='+token;
@@ -118,9 +121,25 @@ $(document).ready(function()
 								$("#prenom").append(data.user[0].prenom)
 								$("#prenom_utilisateur").append(data.user[0].prenom)
 								$("#email").append(data.user[0].email)
-								//$("#statut").append(data.user[0].role[0])
-				
+
 								var role = data.user[0].role[0];
+
+								if(role !== "ROLE_ADMIN")
+								{
+									$("#liStage").css("display","inline");
+									$("#stage").css("display","inline");
+									$("#stageModif").css("display","inline");
+								}
+								
+								if(data.user[0].stage === 0)
+								{
+									$("#stage").append("Non")
+								}
+
+								if(data.user[0].stage === 1)
+								{
+									$("#stage").append("Oui")
+								}
 
 								if(role === "ROLE_ADMIN")
 								{

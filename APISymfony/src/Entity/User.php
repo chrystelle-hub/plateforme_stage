@@ -88,6 +88,11 @@ class User implements UserInterface
      */
     private $candidatures;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $stage;
+
     public function __construct()
     {
         $this->formation = new ArrayCollection();
@@ -301,6 +306,18 @@ class User implements UserInterface
     public function setEtatCompte(int $etat_compte): self
     {
         $this->etat_compte = $etat_compte;
+
+        return $this;
+    }
+
+    public function getStage(): ?int
+    {
+        return $this->stage;
+    }
+
+    public function setStage(int $stage): self
+    {
+        $this->stage = $stage;
 
         return $this;
     }

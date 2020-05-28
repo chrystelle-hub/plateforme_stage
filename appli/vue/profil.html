@@ -123,6 +123,7 @@
                             <li>Email</li>
                             <li>Statut</li>
                             <li>formation</li>
+                            <li id="liStage" style="display: none;">Stage</li>
                         </ul>
                     </div>
                     <div class="parti_2">
@@ -132,17 +133,23 @@
                             <li id="email"></li>
                             <li id="statut"></li>
                             <li id="formation"></li>
+                            <li id="stage" style="display: none;"></li>
                         </ul>
                     </div>
                 </div>
 
                 <div id ="menu_2" class="form_info cache_menu2">
                     <div class="form-group">
-                    <input id="nomModif" class="form-control" type="text" placeholder="Nom...">
-                    <input id="prenomModif" class="form-control" type="text" placeholder="Prénom...">
-                    <input id="pwdModif" class="form-control" type="password" placeholder="Password...">
-                    <button id="edit" class="btn btn-light btn-block ml-1" style="background-color: #e3007e;color:white">Enregistrer</button>
-                </div>
+                        <input id="nomModif" class="form-control" type="text" placeholder="Nom...">
+                        <input id="prenomModif" class="form-control" type="text" placeholder="Prénom...">
+                        <input id="pwdModif" class="form-control" type="password" placeholder="Password...">
+                        <select id="stageModif" class="custom-select mb-2" name="stage_reponse"  style="margin-left: 5px; display: none;" required>
+                            <option value="" >Stage trouvé ?</option>
+                            <option value="1">Oui</option>
+                            <option value="0">Non</option>
+                        </select>
+                        <button id="edit" class="btn btn-light btn-block ml-1" style="background-color: #e3007e;color:white">Enregistrer</button>
+                    </div>
                 </div>
             </div>
             <div class="buton_profil">

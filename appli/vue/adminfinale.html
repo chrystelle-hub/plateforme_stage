@@ -171,6 +171,15 @@ $(document).ready(function()
 								const options = {year: 'numeric', month: 'numeric', day: 'numeric'};
 								var date = date.toLocaleDateString("fr-FR", options);
 
+								var stage = element['stage'];
+								if(stage === 1)
+								{
+									var stage = "Oui"
+								}
+								if(stage === 0)
+								{
+									var stage = "Non"
+								}
 								var html = '<div class="user">'+
 											'<div>'+
 												'<label>Nom Prenom</label>'+
@@ -189,7 +198,7 @@ $(document).ready(function()
 
 											'<div>'+
 												'<label>Stage</label>'+
-												'<p id="date_creation">Non</p>'+
+												'<p id="date_creation">'+stage+'</p>'+
 											'</div>'+
 						
 											'<div class="div_accept">'+

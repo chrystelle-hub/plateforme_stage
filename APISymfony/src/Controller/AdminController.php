@@ -86,7 +86,6 @@ class AdminController extends AbstractController
                     'date'=>$candidature->getDateEnvoieCandidature(),
                     'entreprise'=>$candidature->getEntreprise()->getNom(), 
                     'etat'=>$candidature->getEtat(),
-                    'reponse'=>$candidature->getReponse()
                 ];
             }
             $liste_users[] = [
@@ -96,6 +95,7 @@ class AdminController extends AbstractController
                 'date_creation_password'=> $formation_user->getDateCreationPassword(),
                 'etat_compte'=>$formation_user->getEtatCompte(),
                 'roles'=>$formation_user->getRoles(),
+                'stage'=>$formation_user->getStage(),
                 'candidatures'=>$candidature_user
             ];
         }

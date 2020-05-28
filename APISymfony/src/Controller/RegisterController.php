@@ -30,6 +30,7 @@ class RegisterController extends AbstractController
             $user->setDateCreationPassword(new \DateTime());
             $user->setListePwd([$user->getPassword(),null,null,null,null]);
             $user->setEtatCompte(0);
+            $user->setStage(0);
             $formation=$this->getDoctrine()->getRepository(Formation::class)->find($request->get('formation'));
             $user->addFormation($formation);
             $entityManager = $this->getDoctrine()->getManager();
