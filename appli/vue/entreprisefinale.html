@@ -89,7 +89,7 @@ $(document).ready(function()
 						{
 							$("#telephoneEntreprise").text('Tel : '+entreprise_infos['tel'])
 						}
-						$("#secteur").append(entreprise_infos['secteur_activite'])
+						$("#secteur").text("Secteur d'activit\351 : "+entreprise_infos['secteur_activite'])
 						$("#departement").text(entreprise_infos['departement'])
 						let candidatures=data['liste_candidature'][0];
 						$("#CandidatureLettre").text(candidatures['moyen']['lettre'])
