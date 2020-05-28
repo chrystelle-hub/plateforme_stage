@@ -72,19 +72,31 @@ class AdminController extends AbstractController
             $liste_formations[] = ['id'=> $formation->getId()];
         }
         $formation_users = $em->getRepository(User::class)->findUsers($formation->getId());
-        
+
         $liste_users = [];
 
         foreach($formation_users as $formation_user)
         {
+            $candidatures_user = $formation_user->getCandidatures();
+            $candidature_user=[];
+            foreach($candidatures_user as $candidature)
+            {
+                $candidature_user[]=[
+                    'id'=>$candidature->getId(),
+                    'date'=>$candidature->getDateEnvoieCandidature(),
+                    'entreprise'=>$candidature->getEntreprise()->getNom(), 
+                    'etat'=>$candidature->getEtat(),
+                    'reponse'=>$candidature->getReponse()
+                ];
+            }
             $liste_users[] = [
                 'id' => $formation_user->getId(),
                 'nom' => $formation_user->getNom(),
                 'prenom'=> $formation_user->getPrenom(),
                 'date_creation_password'=> $formation_user->getDateCreationPassword(),
                 'etat_compte'=>$formation_user->getEtatCompte(),
-                'roles'=>$formation_user->getRoles()
-                
+                'roles'=>$formation_user->getRoles(),
+                'candidatures'=>$candidature_user
             ];
         }
 
@@ -142,6 +154,50 @@ class AdminController extends AbstractController
 
 
     }
+
+     /**
+     *
+     * @Route("/desactive", name="admin_deasctive_user")
+     */
+    public function desactivation(Request $request, EntityManagerInterface $em)
+    {
+        $userDesactive = $em->getRepository(User::class)->find($request->request->get('id'));
+
+        $data = json_decode($request->getContent());
+        
+        if($userDesactive->getEtatCompte() === 1)
+        {
+            $userDesactive->setEtatCompte(0);
+            $em->persist($userDesactive);
+            $em->flush();
+
+        $data = [
+            'status'=>200,
+            'message'=>'le compte est désactivé'
+        ];
+
+        $response = new JsonResponse($data);
+
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+
+        return $response;
+
+        } 
+        else {
+
+            $data = [
+                'statut' => 500,
+                'message' => 'le compte est déjà désactivé'
+            ];
+        
+
+
+        return $response;
+        }
+
+
+    }
+
     /**
      * @Route("/add/formation", name="admin_add_formation", methods ={"POST"})
      */

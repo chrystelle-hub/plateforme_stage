@@ -2,7 +2,7 @@
 <div class="contenair_admin">
     <div class="titre_admin taille_inscri">
         <h2>Inscrire</h2>
-        <div class="contenair_formulaire" style="width: 200px;">
+        <div class="contenair_formulaire">
             <div class="titre_inscri">
                 <h2>Inscrire un utilisateur</h2>
             </div>
@@ -20,6 +20,18 @@
                 <button id="inscrire" class="btn btn-info" style="margin:10px">Inscrire</button>
             </div>
         </div>
+        <h2>Formation</h2>
+            <div class="contenair_formulaire">
+                <div class="titre_inscri">
+                    <h2>Nouvelle Formation</h2>
+                </div>
+                <div class="form-group">
+                    <span id="ajout"></span>
+                    <input class="form-control" id="nom_formation" type="text" placeholder="Nom Formation" style="margin:10px">
+                    <input class="form-control" id="promotion" type="text" placeholder="Promotion" style="margin:10px">
+                    <button id="ajout_formation"class="btn btn-info" style="margin:10px">Ajouter</button>
+                </div>
+            </div>
     </div>
     <div class="titre_admin">
         <h2>Nouveaux inscris</h2>
@@ -27,14 +39,30 @@
         <div class="user_activ">
 
         </div>
-        <h2>les stagiaires</h2>
+        <h2>Les stagiaires</h2>
         <span id = "success"></span>
         <div class="user_activ2">
 
         </div>
+        <div>
+            <h2>Formateur</h2>
+            <div class="contenair_formulaire contenair_formateur_form">
+                <div class="form_inscription">
+                    <div class="barre_recherche admin_search">
+                        <i class="fas fa-search"></i>
+                        <input id="search_email" type="search" name="searchBar" placeholder="Email d'utilisateur"/>
+                    </div>
+                    <button id="search" class="searchButton">Rechercher</button>
+                </div>
+                <span id="role"></span>
+                <div class="formateur_align">
+                    
+                </div>
+            </div>
+        </div>
     </div>
     
-
+<!--
     <div class="column_admin">
         <div class="titre_admin taille_inscri">
             <h2>Formation</h2>
@@ -68,9 +96,13 @@
             </div>
         </div>
 
-    </div>
+    </div>-->
 </div>
 
 <script>
-    $(".croix_desactive_js")
+    $(".croix_desactive_js");
+    $("#show_candidatures").click(function(){
+        $("#candidatures_user").toggle("slow");
+    });
+    
 </script>

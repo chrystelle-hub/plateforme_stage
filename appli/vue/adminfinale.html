@@ -165,30 +165,80 @@ $(document).ready(function()
 								$(html).appendTo($('.user_activ'));
 							}
 							if(element['etat_compte'] === 1 && element['roles'][0] == "ROLE_USER") {
-
+								var candidatures = element['candidatures'];
+							
 								var date = new Date(element["date_creation_password"].date);
 								const options = {year: 'numeric', month: 'numeric', day: 'numeric'};
 								var date = date.toLocaleDateString("fr-FR", options);
 
 								var html = '<div class="user">'+
-									'<div>'+
-										'<label>Nom Prenom</label>'+
-										'<p id="nom_prenom">'+ element['nom'] +' '+ element['prenom'] +'</p>'+
-									'</div>'+
-								
-									'<div>'+
-										'<label>date inscription</label>'+
-										'<p id="date_creation">'+ date +'</p>'+
-									'</div>'+
-				
-									'<div class="div_accept">'+
-										'<button id="desactive" class="desactive">'+
-											'<input type="hidden" value=' + element['id'] +'>'+ 
-											
-										'D\351sactiver</button>'+
-									'</div>'+
-								'</div>'
+											'<div>'+
+												'<label>Nom Prenom</label>'+
+												'<p id="nom_prenom">'+ element['nom'] +' '+ element['prenom'] +'</p>'+
+											'</div>'+
+										
+											'<div>'+
+												'<label>date inscription</label>'+
+												'<p id="date_creation">'+ date +'</p>'+
+											'</div>'+
+
+											'<div>'+
+												'<label>nombre candidatures</label>'+
+												'<p id="date_creation">'+ element['candidatures'].length +'</p>'+
+											'</div>'+
+
+											'<div>'+
+												'<label>Stage</label>'+
+												'<p id="date_creation">Non</p>'+
+											'</div>'+
+						
+											'<div class="div_accept">'+
+												'<button id="desactive" class="desactive">'+
+													'<input type="hidden" value=' + element['id'] +'>'+ 
+													
+												'D\351sactiver</button>'+
+											'</div>'+
+										'</div>'
+										/*'<div class="candidatures_user">'+
+										'<h4>Candidatures</h4>'+
+										'</div>'*/
 								$(html).appendTo($('.user_activ2'));
+								
+								
+								/*candidatures.forEach(function(donnee){
+									var date_candidature = new Date(donnee['date'].date);
+									const options = {year: 'numeric', month: 'numeric', day: 'numeric'};
+									var date_candidature = date_candidature.toLocaleDateString("fr-FR", options);
+
+									if(donnee['etat'] === 0)
+									{
+										var etat = "En cours"
+									}
+									if(donnee['etat'] === 1)
+									{
+										var etat = "Fini"
+									}
+									var html2 =
+									
+											'<div class="user_candidature">'+
+												'<div>'+
+													'<label style="color:#e3007e;font-size:14px;">Entreprise</label>'+
+													'<p>'+donnee['entreprise']+'</p>'+
+												'</div>'+
+												'<div>'+
+													'<label style="color:#e3007e;font-size:14px;">Date candidature</label>'+
+													'<p>'+date_candidature+'</p>'+
+												'</div>'+
+												'<div>'+
+													'<label style="color:#e3007e;font-size:14px;">Etat</label>'+
+													'<p>'+etat+'</p>'+
+												'</div>'+
+											'</div>'	
+									
+
+								$(html2).appendTo($('.user_activ2'));
+
+							})*/
 							}
 
 						});
