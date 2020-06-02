@@ -30,6 +30,17 @@ $(document).ready(function () {
       var url = 'ajout_entreprise.html?token=' + token;
       $('#ajout').attr('href', url);
       $('#buttonSearch').click(function () {
+        $(document).ajaxStart(function(){
+				
+          $('#chargement_rechercher').css('display','block')
+          
+        
+        })
+        $(document).ajaxComplete(function(){
+          
+          $('#chargement_rechercher').css('display','none')
+          
+        })
         $.ajax({
           url: 'https://127.0.0.1:8000/search',
           type: 'POST',
@@ -120,7 +131,7 @@ $(document).ready(function () {
                   token +
                   '&id=' +
                   element['id'] +
-                  '"><button class="btn btn-success mb-2"> Voir la fiche compl\350te </button></a>' +
+                  '"><button class="btn btn-success mb-2" style="background-color:#87bb34;border-color:#87bb34;"> Voir la fiche compl\350te </button></a>' +
                   '</div>';
                 $(html).appendTo($('.contenair_entreprise'));
 

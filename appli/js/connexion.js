@@ -26,6 +26,17 @@ $(document).ready(function () {
     })
     .always(function () {
       $('#seconnecter').click(function () {
+        $(document).ajaxStart(function(){
+				
+          $('#chargement').css('display','block')
+          
+        
+        })
+        $(document).ajaxComplete(function(){
+          
+          $('#chargement').css('display','none')
+          
+        })
         $.ajax({
           url: 'https://127.0.0.1:8000/login',
           type: 'POST',

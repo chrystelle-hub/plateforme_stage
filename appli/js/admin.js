@@ -195,7 +195,7 @@ $(document).ready(function () {
                 '<div>' +
                 '<label>nombre candidatures</label>' +
                 '<p id="date_creation">' +
-                element['candidatures'].length +
+                element['nombre_candidature'] +
                 '</p>' +
                 '</div>' +
                 '<div>' +
