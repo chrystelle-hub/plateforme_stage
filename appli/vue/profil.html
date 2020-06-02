@@ -1,6 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
 
-       
-        <!--<div class="dashboardStagiaire" style="visibility:hidden;" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../appli/css/stylesheet.css" media="all" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Afpa Stage</title>
+</head>
+
+<body>
+    <!--<div class="dashboardStagiaire" style="visibility:hidden;" >
             <div class="titrePage">Mon profil</div>
             <div class="containerStagiaire">
                 <div id="user_profil_stagiaire" class="modifProfil">
@@ -59,8 +78,8 @@
                         <button id="affiche_nouveau" class="btnStagiaireValidation">Stagiaire à valider</button>
                     </div>
                 </div>-->
-                <!-- Affiche le profil + candidature d'un apprenant -->
-                <!--<div id="afficheE" class="apprenantDetail">
+    <!-- Affiche le profil + candidature d'un apprenant -->
+    <!--<div id="afficheE" class="apprenantDetail">
                     <div id="containerProfil" class="ficheApprenant">
                         <div class="profilApprenant">
 
@@ -104,11 +123,14 @@
            
     </body>
 </html>-->
-<div class="contenair_historique">
-    <div class="historique">
-        
+    <div id="header"></div>
+    <div id="contenu"></div>
+    <div id="footer"></div>
+    <div class="contenair_historique">
+        <div class="historique">
+
+        </div>
     </div>
-</div>
 
     <div class="mes_infos_profil">
         <h2>Mes informations</h2>
@@ -138,33 +160,37 @@
                     </div>
                 </div>
 
-                <div id ="menu_2" class="form_info cache_menu2">
+                <div id="menu_2" class="form_info cache_menu2">
                     <div class="form-group">
                         <input id="nomModif" class="form-control" type="text" placeholder="Nom...">
                         <input id="prenomModif" class="form-control" type="text" placeholder="Prénom...">
                         <input id="pwdModif" class="form-control" type="password" placeholder="Password...">
-                        <select id="stageModif" class="custom-select mb-2" name="stage_reponse"  style="margin-left: 5px; display: none;" required>
-                            <option value="" >Stage trouvé ?</option>
+                        <select id="stageModif" class="custom-select mb-2" name="stage_reponse"
+                            style="margin-left: 5px; display: none;" required>
+                            <option value="">Stage trouvé ?</option>
                             <option value="1">Oui</option>
                             <option value="0">Non</option>
                         </select>
-                        <button id="edit" class="btn btn-light btn-block ml-1" style="background-color: #e3007e;color:white">Enregistrer</button>
+                        <button id="edit" class="btn btn-light btn-block ml-1"
+                            style="background-color: #e3007e;color:white">Enregistrer</button>
                     </div>
                 </div>
             </div>
             <div class="buton_profil">
-                <button id="buton_edit_js" class="btn btn-info">Modifier mon profil <i class="fas fa-arrow-right"></i></button>
+                <button id="buton_edit_js" class="btn btn-info">Modifier mon profil <i
+                        class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
 
+
     <script>
 
         voletProfil = true;
-    
-        function ouvertureMenuSetting(){
-    
-            if(voletProfil){
+
+        function ouvertureMenuSetting() {
+
+            if (voletProfil) {
                 voletProfil = false;
                 document.getElementById("menu_1").classList.remove("ouvert_user");
                 document.getElementById("menu_1").classList.add("cache_user");
@@ -172,7 +198,7 @@
                 document.getElementById("menu_2").classList.add("ferme_cache");
                 document.getElementById("buton_edit_js").textContent = "retour";
             }
-            else{
+            else {
                 voletProfil = true;
                 document.getElementById("menu_1").classList.remove("cache_user");
                 document.getElementById("menu_1").classList.add("ouvert_user");
@@ -181,9 +207,14 @@
                 document.getElementById("buton_edit_js").textContent = "Modifier mon profil"
             }
         }
-    
-    
+
+
         var varFermetureSetting = document.getElementById("buton_edit_js");
-        varFermetureSetting.addEventListener("click",ouvertureMenuSetting);
-    
+        varFermetureSetting.addEventListener("click", ouvertureMenuSetting);
+
     </script>
+
+
+    <script src='../jquery-3.4.1.min.js' type='text/javascript'></script>
+    <script src="../js/profil.js"></script>
+</body>

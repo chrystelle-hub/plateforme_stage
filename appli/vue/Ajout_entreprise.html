@@ -1,55 +1,89 @@
-<div class="container"  style="width: 50%;">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="titre_admin rien_form">
-        <h2>Ajouter une entreprise</h2>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../appli/css/stylesheet.css" media="all" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Afpa Stage</title>
+</head>
 
-    <div id="erreurNom"></div>
-    <div class="form-group">
-        <label for="name">Nom de l'entreprise :</label>
-        <input class="form-control" type="text" id="name" name="name" placeholder="Nom" required>
-    </div>
+<body>
+    <div id="header"></div>
+    <div id="contenu"></div>
+    <div id="footer"></div>
 
-    <div id="erreurFormation"></div>
-    <div class="form-group">
+    <div class="container" style="width: 50%;">
+
+        <div class="titre_admin rien_form">
+            <h2>Ajouter une entreprise</h2>
+        </div>
+
+        <div id="erreurNom"></div>
+        <div class="form-group">
+            <label for="name">Nom de l'entreprise :</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Nom" required>
+        </div>
+
         <div id="erreurFormation"></div>
-        <label for="formation">Formation visée :</label>
-        <select id="formation" class="form-control" multiple="true" name="choix_formation" placeholder="Choisissez une formation">
-        </select>
+        <div class="form-group">
+            <div id="erreurFormation"></div>
+            <label for="formation">Formation visée :</label>
+            <select id="formation" class="form-control" multiple="true" name="choix_formation"
+                placeholder="Choisissez une formation">
+            </select>
+        </div>
+
+        <div id="erreurSecteur"></div>
+        <div class="form-group">
+            <label for="activite">Secteur d'activité :</label>
+            <input class="form-control" type="text" id="activite" name="activite" placeholder="Secteur d'activité"
+                required>
+        </div>
+
+        <div id="erreurAdresse"></div>
+        <div class="form-group">
+            <label for="adresse">Adresse :</label>
+            <input class="form-control" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
+        </div>
+
+        <div id="erreurCode"></div>
+        <div class="form-group">
+            <label for="code_postal">Code postal :</label>
+            <input class="form-control" type="text" id="code_postal" name="code_postal" placeholder="Code postal"
+                required>
+        </div>
+
+        <div id="erreurTel"></div>
+        <div class="form-group">
+            <label class="tel">Téléphone :</label>
+            <input class="form-control" type="text" id="tel" name="tel" placeholder="Tel">
+        </div>
+
+        <div id="erreurEmail"></div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input class="form-control" type="text" id="email" name="email" placeholder="Email">
+        </div>
+
+
+        <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Ajouter</button>
+
+
     </div>
 
-    <div id="erreurSecteur"></div>
-    <div class="form-group">
-        <label for="activite">Secteur d'activité :</label>
-        <input class="form-control" type="text" id="activite" name="activite" placeholder="Secteur d'activité" required>
-    </div>
 
-    <div id="erreurAdresse"></div>
-    <div class="form-group">
-        <label for="adresse">Adresse :</label>
-        <input class="form-control" type="text" id="adresse" name="adresse" placeholder="Adresse" required>
-    </div>
+    <script src='../jquery-3.4.1.min.js' type='text/javascript'></script>
+    <script src="../js/ajoutEntreprise.js"></script>
 
-    <div id="erreurCode"></div>
-    <div class="form-group">
-        <label for="code_postal">Code postal :</label>
-        <input class="form-control" type="text" id="code_postal" name="code_postal" placeholder="Code postal" required>
-    </div>
-
-    <div id="erreurTel"></div>
-    <div class="form-group">
-        <label class="tel">Téléphone :</label>
-        <input class="form-control" type="text" id= "tel" name="tel" placeholder="Tel">
-    </div>
-
-    <div id="erreurEmail"></div>
-    <div class="form-group">
-        <label for="email">Email :</label>
-        <input class="form-control" type="text" id="email" name="email" placeholder="Email">
-    </div>
-
-
-    <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Ajouter</button>
-
-
-</div>
+</body>

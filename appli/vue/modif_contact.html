@@ -1,34 +1,68 @@
-<div class="container"  style="width: 50%;">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="titre_admin rien_form">
-        <h2>Modifier Contact</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../appli/css/stylesheet.css" media="all" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Afpa Stage</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenu"></div>
+    <div id="footer"></div>
+
+    <div class="container" style="width: 50%;">
+
+        <div class="titre_admin rien_form">
+            <h2>Modifier Contact</h2>
+        </div>
+
+        <div id="erreurFonction"></div>
+        <div class="form-group">
+            <label for="fonction_contact">Fonction :</label>
+            <input class="form-control" type="text" id="fonction_contact" name="fonction_contact" placeholder="Fonction"
+                required>
+        </div>
+
+        <div id="erreurFormation"></div>
+        <div class="form-group">
+            <div id="erreurTel"></div>
+            <label for="tel_contact">Téléphone :</label>
+            <input class="form-control" type="text" id="tel_contact" name="tel_contact" placeholder="Téléphone">
+        </div>
+
+        <div id="erreurEmail"></div>
+        <div class="form-group">
+            <label for="email_contact">Email :</label>
+            <input class="form-control" type="text" id="email_contact" name="email_contact" placeholder="Email">
+        </div>
+
+        <div id="erreurLinkedin"></div>
+        <div class="form-group">
+            <label for="linkedin_contact">Linkedin :</label>
+            <input class="form-control" type="text" id="linkedin_contact" name="linkedin_contact"
+                placeholder="Linkedin">
+        </div>
+
+        <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Modifier</button>
+
     </div>
 
-    <div id="erreurFonction"></div>
-    <div class="form-group">
-        <label for="fonction_contact">Fonction :</label>
-        <input class="form-control" type="text" id="fonction_contact" name="fonction_contact" placeholder="Fonction" required>
-    </div>
 
-    <div id="erreurFormation"></div>
-    <div class="form-group">
-        <div id="erreurTel"></div>
-        <label for="tel_contact">Téléphone :</label>
-        <input class="form-control" type="text" id="tel_contact" name="tel_contact" placeholder="Téléphone">
-    </div>
 
-    <div id="erreurEmail"></div>
-    <div class="form-group">
-        <label for="email_contact">Email :</label>
-        <input class="form-control" type="text" id="email_contact" name="email_contact" placeholder="Email">
-    </div>
 
-    <div id="erreurLinkedin"></div>
-    <div class="form-group">
-        <label for="linkedin_contact">Linkedin :</label>
-        <input class="form-control" type="text" id="linkedin_contact" name="linkedin_contact" placeholder="Linkedin">
-    </div>
-
-    <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Modifier</button>
-
-</div>
+    <script src='../jquery-3.4.1.min.js' type='text/javascript'></script>
+    <script src="../js/modifContact.js"></script>
+</body>

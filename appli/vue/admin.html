@@ -1,68 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="contenair_admin">
-    <div class="titre_admin taille_inscri">
-        <h2>Inscrire</h2>
-        <div class="contenair_formulaire">
-            <div class="titre_inscri">
-                <h2>Inscrire un utilisateur</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../appli/css/stylesheet.css" media="all" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Afpa Stage</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenu"></div>
+    <div id="footer"></div>
+    <div class="contenair_admin">
+        <div class="titre_admin taille_inscri">
+            <h2>Inscrire</h2>
+            <div class="contenair_formulaire">
+                <div class="titre_inscri">
+                    <h2>Inscrire un utilisateur</h2>
+                </div>
+                <div class="form-group">
+                    <span id="erreurEmail"></span>
+                    <input id="email" class="form-control" type="email" placeholder=" Email" style="margin:10px">
+                    <span id="erreurNom"></span>
+                    <input id="nom" class="form-control" type="text" placeholder="Nom" style="margin:10px">
+                    <span id="erreurPrenom"></span>
+                    <input id="prenom" class="form-control" type="text" placeholder="Prenom" style="margin:10px">
+                    <span id="erreurPassword"></span>
+                    <input id="password" class="form-control" type="password" placeholder=" Mot de passe"
+                        style="margin:10px">
+                    <select class="custom-select" id="formation" placeholder="Choisissez une formation"
+                        style="margin:10px">
+                    </select>
+                    <button id="inscrire" class="btn btn-info" style="margin:10px">Inscrire</button>
+                </div>
             </div>
-            <div class="form-group">
-                <span id="erreurEmail"></span>
-                <input id="email" class="form-control" type="email" placeholder=" Email" style="margin:10px">
-                <span id="erreurNom"></span>
-                <input id="nom" class="form-control" type="text" placeholder="Nom" style="margin:10px">
-                <span id="erreurPrenom"></span>
-                <input id="prenom" class="form-control" type="text" placeholder="Prenom" style="margin:10px">
-                <span id="erreurPassword"></span>
-                <input id="password" class="form-control" type="password" placeholder=" Mot de passe" style="margin:10px">
-                <select class="custom-select" id="formation" placeholder="Choisissez une formation" style="margin:10px">
-                </select>
-                <button id="inscrire" class="btn btn-info" style="margin:10px">Inscrire</button>
-            </div>
-        </div>
-        <h2>Formation</h2>
+            <h2>Formation</h2>
             <div class="contenair_formulaire">
                 <div class="titre_inscri">
                     <h2>Nouvelle Formation</h2>
                 </div>
                 <div class="form-group">
                     <span id="ajout"></span>
-                    <input class="form-control" id="nom_formation" type="text" placeholder="Nom Formation" style="margin:10px">
+                    <input class="form-control" id="nom_formation" type="text" placeholder="Nom Formation"
+                        style="margin:10px">
                     <input class="form-control" id="promotion" type="text" placeholder="Promotion" style="margin:10px">
-                    <button id="ajout_formation"class="btn btn-info" style="margin:10px">Ajouter</button>
+                    <button id="ajout_formation" class="btn btn-info" style="margin:10px">Ajouter</button>
                 </div>
             </div>
-    </div>
-    <div class="titre_admin">
-        <h2>Nouveaux inscris</h2>
-        <span id = "success"></span>
-        <div class="user_activ">
-
         </div>
-        <h2>Les stagiaires</h2>
-        <span id = "success"></span>
-        <div class="user_activ2">
+        <div class="titre_admin">
+            <h2>Nouveaux inscris</h2>
+            <span id="success"></span>
+            <div class="user_activ">
 
-        </div>
-        <div>
-            <h2>Formateur</h2>
-            <div class="contenair_formulaire contenair_formateur_form">
-                <div class="form_inscription">
-                    <div class="barre_recherche admin_search">
-                        <i class="fas fa-search"></i>
-                        <input id="search_email" type="search" name="searchBar" placeholder="Email d'utilisateur"/>
+            </div>
+            <h2>Les stagiaires</h2>
+            <span id="success"></span>
+            <div class="user_activ2">
+
+            </div>
+            <div>
+                <h2>Formateur</h2>
+                <div class="contenair_formulaire contenair_formateur_form">
+                    <div class="form_inscription">
+                        <div class="barre_recherche admin_search">
+                            <i class="fas fa-search"></i>
+                            <input id="search_email" type="search" name="searchBar" placeholder="Email d'utilisateur" />
+                        </div>
+                        <button id="search" class="searchButton">Rechercher</button>
                     </div>
-                    <button id="search" class="searchButton">Rechercher</button>
-                </div>
-                <span id="role"></span>
-                <div class="formateur_align">
-                    
+                    <span id="role"></span>
+                    <div class="formateur_align">
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-<!--
+
+        <!--
     <div class="column_admin">
         <div class="titre_admin taille_inscri">
             <h2>Formation</h2>
@@ -97,9 +123,14 @@
         </div>
 
     </div>-->
-</div>
+    </div>
 
-<script>
-    $(".croix_desactive_js");
-    
-</script>
+    <script>
+        $(".croix_desactive_js");
+
+    </script>
+
+    <script src='../jquery-3.4.1.min.js' type='text/javascript'></script>
+    <script src="../js/admin.js"></script>
+
+</body>
