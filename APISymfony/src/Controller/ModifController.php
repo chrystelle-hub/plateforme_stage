@@ -141,7 +141,7 @@ class ModifController extends AbstractController
         //cretion formalaire lié à l'entité
         $form = $this->createForm(AjoutContactType::class, $contactUpdate);
         //remove champs nom form
-        $form->remove('nom');
+        //$form->remove('nom');
         $values=$request->request->all();
         //remove data qui ne servent pas dans le formulaire
         unset($values["X-AUTH-TOKEN"]);
@@ -178,7 +178,7 @@ class ModifController extends AbstractController
             else
             {*/
                 //pour chaque attribut de l'entité qui peut avoir été modifié verif si il a changé ou pas
-                foreach(['fonction', 'tel', 'mail','linkedin','entreprise'] as $field)
+                foreach(['nom','fonction', 'tel', 'mail','linkedin','entreprise'] as $field)
                 {
                 //si il a changé ajouter la modif à l'historique
                     if($propertyAccessor->getValue($contactAvantUpdate, $field)!=$propertyAccessor->getValue($contactUpdate, $field))
