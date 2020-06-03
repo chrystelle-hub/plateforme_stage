@@ -45,12 +45,20 @@ class SearchController extends AbstractController
                 $nom=$entreprise->getNom();
                 $secteur_activite=$entreprise->getSecteurActivite();
                 $code_postal=$entreprise->getCodePostal();
+                $ville = $entreprise->getVille();
                 $formations=$entreprise->getFormation();
+
                 foreach($formations as $formation)
                 {
                     $formation_liste[]=$formation->getTag();
                 }
-                $entreprise_liste[]=['id'=>$id,'nom'=>$nom,'code_postal'=>$code_postal,'secteur_activite'=>$secteur_activite,'tag'=>$formation_liste];
+                $entreprise_liste[]=[
+                    'id'=>$id,
+                    'nom'=>$nom,
+                    'code_postal'=>$code_postal,
+                    'ville'=>$ville,
+                    'secteur_activite'=>$secteur_activite,
+                    'tag'=>$formation_liste];
             }
             $response->setContent(json_encode(
                 [

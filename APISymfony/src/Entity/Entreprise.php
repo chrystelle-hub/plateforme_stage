@@ -76,6 +76,11 @@ class Entreprise
      */
     private $contacts;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
     public function __construct()
     {
         $this->candidatures = new ArrayCollection();
@@ -268,6 +273,18 @@ class Entreprise
                 $contact->setEntreprise(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
 
         return $this;
     }

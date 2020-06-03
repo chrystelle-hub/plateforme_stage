@@ -68,6 +68,7 @@ $(document).ready(function () {
             $('#activite').val(entreprise['secteur_activite']);
             $('#adresse').val(entreprise['adresse']);
             $('#code_postal').val(entreprise['code_postal']);
+            $('#ville').val(entreprise['ville']);
             $('#tel').val(entreprise['tel']);
             $('#email').val(entreprise['mail']);
             var formations = entreprise['formation'];
@@ -96,6 +97,7 @@ $(document).ready(function () {
             secteur_activite: $('#activite').val(),
             adresse: $('#adresse').val(),
             code_postal: $('#code_postal').val(),
+            ville: $('#ville').val(),
             tel: $('#tel').val(),
             mail: $('#email').val(),
             formation: $('#formation').val(),
@@ -108,6 +110,7 @@ $(document).ready(function () {
           $('#erreurSecteur').text('');
           $('#erreurAdresse').text('');
           $('#erreurCode').text('');
+          $('#erreurVille').text('');
           $('#erreurTel').text('');
           $('#erreurEmail').text('');
           if (data['ajout'] === 'ok') {
@@ -126,6 +129,9 @@ $(document).ready(function () {
             if (data['erreur']['code_postal']) {
               $('#erreurCode').text(data['erreur']['code_postal'][0]);
             }
+            if (data['erreur']['ville']) {
+              $('#erreurVille').text(data['erreur']['ville'][0]);
+            }
             if (data['erreur']['tel']) {
               $('#erreurTel').text(data['erreur']['tel'][0]);
             }
@@ -136,6 +142,6 @@ $(document).ready(function () {
         });
       });
 
-      $('#footer').load('footer.html');
+      //$('#footer').load('footer.html');
     });
 });

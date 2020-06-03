@@ -53,6 +53,13 @@ class AjoutEntrepriseType extends AbstractType
                     ]),
                  ],
              ])
+            ->add('ville',TextType::class, [
+                'constraints' => [
+                    new NotBlank([
+                       'message' => 'Veillez saisir une ville',
+                   ]),
+               ],  
+            ])
             ->add('tel',TelType::class, [
                 'required' => false,
                 'empty_data' => 0
