@@ -68,20 +68,32 @@ $(document).ready(function () {
               );
             } else {
               if (data['erreur']['email']) {
-                $('#erreurEmail').addClass('alert alert-danger');
-                $('#erreurEmail').text(data['erreur']['email'][0]);
+                showAlert(
+                  '#erreurEmail',
+                  data['erreur']['email'][0],
+                  'alert alert-danger'
+                );
               }
               if (data['erreur']['nom']) {
-                $('#erreurNom').addClass('alert alert-danger');
-                $('#erreurNom').text(data['erreur']['nom'][0]);
+                showAlert(
+                  '#erreurNom',
+                  data['erreur']['nom'][0],
+                  'alert alert-danger'
+                );
               }
               if (data['erreur']['prenom']) {
-                $('#erreurPrenom').addClass('alert alert-danger');
-                $('#erreurPrenom').text(data['erreur']['prenom'][0]);
+                showAlert(
+                  '#erreurPrenom',
+                  data['erreur']['prenom'][0],
+                  'alert alert-danger'
+                );
               }
               if (data['erreur']['password']) {
-                $('#erreurPassword').addClass('alert alert-danger');
-                $('#erreurPassword').text(data['erreur']['password'][0]);
+                showAlert(
+                  '#erreurPassword',
+                  data['erreur']['password'][0],
+                  'alert alert-danger'
+                );
               }
             }
             console.log(data);

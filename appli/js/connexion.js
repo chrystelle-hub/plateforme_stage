@@ -26,17 +26,12 @@ $(document).ready(function () {
     })
     .always(function () {
       $('#seconnecter').click(function () {
-        $(document).ajaxStart(function(){
-				
-          $('#chargement').css('display','block')
-          
-        
-        })
-        $(document).ajaxComplete(function(){
-          
-          $('#chargement').css('display','none')
-          
-        })
+        $(document).ajaxStart(function () {
+          $('#chargement').css('display', 'block');
+        });
+        $(document).ajaxComplete(function () {
+          $('#chargement').css('display', 'none');
+        });
         $.ajax({
           url: 'https://127.0.0.1:8000/login',
           type: 'POST',
@@ -53,11 +48,17 @@ $(document).ready(function () {
             document.location.href = 'profil.html?token=' + token;
           } else {
             if (data['message'] === 'activation') {
-              $('#erreur').addClass('alert alert-danger');
-              $('#erreur').text("Votre compte n'est pas encore activ\351");
+              showAlert(
+                '#erreur',
+                "Votre compte n'est pas encore activ\351",
+                'alert alert-danger'
+              );
             } else {
-              $('#erreur').addClass('alert alert-danger');
-              $('#erreur').text('Adresse email ou mot de passe incorrect');
+              showAlert(
+                '#erreur',
+                'Identifiants incorrects',
+                'alert alert-danger'
+              );
             }
           }
           console.log(data);
