@@ -66,6 +66,7 @@ $(document).ready(function () {
             secteur_activite: $('#activite').val(),
             adresse: $('#adresse').val(),
             code_postal: $('#code_postal').val(),
+            ville: $('#ville').val(),
             tel: $('#tel').val(),
             mail: $('#email').val(),
             formation: $('#formation').val(),
@@ -78,6 +79,7 @@ $(document).ready(function () {
           $('#erreurSecteur').text('');
           $('#erreurAdresse').text('');
           $('#erreurCode').text('');
+          $('#erreurVille').text('');
           $('#erreurTel').text('');
           $('#erreurEmail').text('');
           if (data['ajout'] === 'ok') {
@@ -103,6 +105,10 @@ $(document).ready(function () {
             if (data['erreur']['code_postal']) {
               $('#erreurCode').addClass('alert alert-danger');
               $('#erreurCode').text(data['erreur']['code_postal'][0]);
+            }
+            if (data['erreur']['ville']) {
+              $('#erreurCode').addClass('alert alert-danger');
+              $('#erreurCode').text(data['erreur']['ville'][0]);
             }
             if (data['erreur']['tel']) {
               $('#erreurTel').addClass('alert alert-danger');

@@ -101,7 +101,7 @@ $(document).ready(function () {
                   '<div class="stat_entreprise">' +
                   '<i class="fas fa-globe"></i>' +
                   '</div>' +
-                  '<a>Site web</a>' +
+                  '<a>'+element['ville']+'</a>' +
                   '</div>' +
                   '<div class="contenair_stat_entre">' +
                   '<div class="stat_entreprise">' +

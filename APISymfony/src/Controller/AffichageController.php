@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Entreprise;
 use App\Entity\Contact;
 use App\Entity\Candidature;
+use App\Entity\Formation;
 use App\Entity\Formations;
 use App\Service\ResumeCandidatures;
 
@@ -26,7 +27,18 @@ class AffichageController extends AbstractController
         {
             //recup entreprise infos
             $entreprise=$this->getDoctrine()->getRepository(Entreprise::class)->find($idEntreprise);
-            $infos_entreprise=['id'=>$request->get('id'),'nom'=>$entreprise->getNom(),'secteur_activite'=>$entreprise->getSecteurActivite(),'code_postal'=>$entreprise->getCodePostal(),'adresse'=>$entreprise->getAdresse(),'departement'=> $entreprise->getDepartement(),'tel'=> $entreprise->getTel(),'mail'=> $entreprise->getMail(),'historique'=> unserialize($entreprise->getHistoriqueModif())];
+            $infos_entreprise=[
+                'id'=>$request->get('id'),
+                'nom'=>$entreprise->getNom(),
+                'secteur_activite'=>$entreprise->getSecteurActivite(),
+                'code_postal'=>$entreprise->getCodePostal(),
+                'ville'=>$entreprise->getVille(),
+                'adresse'=>$entreprise->getAdresse(),
+                'departement'=> $entreprise->getDepartement(),
+                'tel'=> $entreprise->getTel(),
+                'mail'=> $entreprise->getMail(),
+                'historique'=> unserialize($entreprise->getHistoriqueModif())
+            ];
             //recup contact infos
             $contacts=$entreprise->getContacts();
             $liste_contact=[];
@@ -73,10 +85,10 @@ class AffichageController extends AbstractController
                  $delai_reponse='--';
             }
            //liste candidatures selon formation
-           $liste_formations_candidature=[];
-
-           foreach($formations_candidature as $key=>$formation)
-           {
+            $liste_formations_candidature=[];
+        
+            foreach($formations_candidature as $key=>$formation)
+            {
             $nb_candidatures2=0;
                 foreach ($formation as $form)
                 {
@@ -89,10 +101,10 @@ class AffichageController extends AbstractController
                 $liste_etats2=$resumeCandidatures->listeEtats($etats2);
                 $liste_reponses2=$resumeCandidatures->listeReponses($reponses2);
                 $liste_formations_candidature[]=['tag'=>$key,'nb'=>$nb_candidatures2,'moyen'=>$liste_moyens2,'etat'=>$liste_etats2,'reponse'=>$liste_reponses2];
-           }
+            }
             $liste_candidature[]=['nb'=>$nb_candidatures,'moyen'=>$liste_moyens,'etat'=>$liste_etats,'reponse'=>$liste_reponses,'formation'=>$liste_formations_candidature,'delai_reponse'=>$delai_reponse];
             $response->setContent(json_encode(
-                [ 'entreprise_infos'=>$infos_entreprise,'liste_contact'=>$liste_contact,'liste_formation'=>$liste_formation,'liste_candidature'=>$liste_candidature ]
+                [ 'entreprise_infos'=>$infos_entreprise,'liste_contact'=>$liste_contact,'liste_formation'=>$liste_formation,'liste_candidature'=>$liste_candidature,'formation'=>$liste_formations_candidature ]
             )); 
         }
         else

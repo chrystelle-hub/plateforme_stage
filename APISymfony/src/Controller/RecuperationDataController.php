@@ -74,7 +74,19 @@ class RecuperationDataController extends AbstractController
         {
             $formations_liste[]=$formation->getId();
         }
-        $entreprise_infos=['id'=>$entreprise->getId(),'nom'=>$entreprise->getNom(),'secteur_activite'=>$entreprise->getSecteurActivite(),'adresse'=>$entreprise->getAdresse(),'tel'=>$entreprise->getTel(),'mail'=>$entreprise->getMail(),'code_postal'=>$entreprise->getCodePostal(),'departement' => $entreprise->getDepartement(),'historique' => $entreprise->getHistoriqueModif(),'formation'=>$formations_liste];    
+        $entreprise_infos=[
+            'id'=>$entreprise->getId(),
+            'nom'=>$entreprise->getNom(),
+            'secteur_activite'=>$entreprise->getSecteurActivite(),
+            'adresse'=>$entreprise->getAdresse(),
+            'tel'=>$entreprise->getTel(),
+            'mail'=>$entreprise->getMail(),
+            'code_postal'=>$entreprise->getCodePostal(),
+            'ville'=>$entreprise->getVille(),
+            'departement' => $entreprise->getDepartement(),
+            'historique' => $entreprise->getHistoriqueModif(),
+            'formation'=>$formations_liste
+        ];    
 
         $response->setContent(json_encode(
             [

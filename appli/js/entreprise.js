@@ -70,25 +70,27 @@ $(document).ready(function () {
             });
 
             $('#nomEntreprise').text(entreprise_infos['nom']);
-            $('#adresse').html(
+            $('#adresse').html('<i class="icon icon-location"></i> '+
               'Adresse : ' +
                 entreprise_infos['adresse'] +
                 ' ' +
-                entreprise_infos['code_postal']
+                entreprise_infos['code_postal'] +
+                ' ' +
+                entreprise_infos['ville'].toUpperCase()
             );
             if (entreprise_infos['mail'] == 0) {
-              $('#mailEntreprise').text('Mail : inconnu');
+              $('#mailEntreprise').html('<i class="icon icon-mail"></i> Mail : inconnu');
             } else {
-              $('#mailEntreprise').text('Mail : ' + entreprise_infos['mail']);
+              $('#mailEntreprise').html('<i class="icon icon-mail"></i> Mail : ' + entreprise_infos['mail']);
             }
             if (entreprise_infos['tel'] == 0) {
-              $('#telephoneEntreprise').text('Tel :inconnu');
+              $('#telephoneEntreprise').html('<i class="icon icon-phone"></i> T\351l\351phone :inconnu');
             } else {
-              $('#telephoneEntreprise').text(
-                'Tel : ' + entreprise_infos['tel']
+              $('#telephoneEntreprise').html(
+                '<i class="icon icon-phone"></i> T\351l\351phone : ' + entreprise_infos['tel']
               );
             }
-            $('#secteur').append(entreprise_infos['secteur_activite']);
+            $('#secteur').html('<i class="fas fa-briefcase"></i> Secteur d\'activit\351 : ' + entreprise_infos['secteur_activite']);
             $('#departement').text(entreprise_infos['departement']);
             let candidatures = data['liste_candidature'][0];
             $('#CandidatureLettre').text(candidatures['moyen']['lettre']);
@@ -206,7 +208,7 @@ $(document).ready(function () {
                 '</p>' +
                 '<i class="fas fa-location-arrow"></i>' +
                 '</div>' +
-                '<div id="modif" class="info_ligne_contact cache_info">' +
+                '<div id="modif" class="info_ligne_contact cache_info" style="display: flex; flex-direction: column;">' +
                 '<div class="stat_contenaire">' +
                 '<div class="stat_1">' +
                 '<div class="stat_classique">' +
@@ -304,7 +306,7 @@ $(document).ready(function () {
             });
             let formations = data['liste_formation'];
             formations.forEach(function (element) {
-              let html3 = '<p>' + element['tag'] + '<p><br>';
+              let html3 = '<p>' + element['tag'] + '</p>';
               $(html3).appendTo($('#listeFormations'));
             });
             let historique = Object.entries(entreprise_infos['historique']);
@@ -317,7 +319,7 @@ $(document).ready(function () {
               };
               var date = date.toLocaleDateString('fr-FR', options);
 
-              let html4 = '<p>' + date + ' : ' + element[1] + '<p><br>';
+              let html4 = '<p>' + date + ' : ' + element[1] + '</p>';
               $(html4).appendTo($('#historique'));
             });
           })
