@@ -77,7 +77,8 @@ class AdminController extends AbstractController
 
         foreach($formation_users as $formation_user)
         {
-            $candidatures_user = $formation_user->getCandidatures();
+            $nb_candidature = count($formation_user->getCandidatures());
+            /*$candidatures_user = $formation_user->getCandidatures();
             $candidature_user=[];
             foreach($candidatures_user as $candidature)
             {
@@ -87,7 +88,7 @@ class AdminController extends AbstractController
                     'entreprise'=>$candidature->getEntreprise()->getNom(), 
                     'etat'=>$candidature->getEtat(),
                 ];
-            }
+            }*/
             $liste_users[] = [
                 'id' => $formation_user->getId(),
                 'nom' => $formation_user->getNom(),
@@ -96,7 +97,7 @@ class AdminController extends AbstractController
                 'etat_compte'=>$formation_user->getEtatCompte(),
                 'roles'=>$formation_user->getRoles(),
                 'stage'=>$formation_user->getStage(),
-                'candidatures'=>$candidature_user
+                'nombre_candidature'=>$nb_candidature
             ];
         }
 

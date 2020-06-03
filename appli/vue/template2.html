@@ -34,6 +34,18 @@
                 <a class="btn btn-light" id="recherche_lien"
                     style="background-color: #87bb34;color:white">Rechercher</a>
                 <a class="btn btn-light" id="deconnexion2" style="background-color: #87bb34;color:white">Déconnexion</a>
+                <span id="chargement" style="display: none;">
+                    <div id="floatingCirclesG">
+                        <div class="f_circleG" id="frotateG_01"></div>
+                        <div class="f_circleG" id="frotateG_02"></div>
+                        <div class="f_circleG" id="frotateG_03"></div>
+                        <div class="f_circleG" id="frotateG_04"></div>
+                        <div class="f_circleG" id="frotateG_05"></div>
+                        <div class="f_circleG" id="frotateG_06"></div>
+                        <div class="f_circleG" id="frotateG_07"></div>
+                        <div class="f_circleG" id="frotateG_08"></div>
+                    </div>
+                </span>
             </nav>
         </div>
     </header>
@@ -42,6 +54,17 @@
         $("#profil").attr("href", "profil.html?token=" + token + "");
         $("#recherche_lien").attr("href", "recherche.html?token=" + token + "");
         $("#deconnexion2").click(function () {
+            $(document).ajaxStart(function(){
+				
+                $('#chargement').css('display','block')
+                
+              
+              })
+              $(document).ajaxComplete(function(){
+                
+                $('#chargement').css('display','none')
+                
+              })
             $.ajax({
                 url: "https://127.0.0.1:8000/deconnexion",
                 type: 'POST',
