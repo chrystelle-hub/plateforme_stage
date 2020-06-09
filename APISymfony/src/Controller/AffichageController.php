@@ -84,7 +84,6 @@ class AffichageController extends AbstractController
                 
                 $liste_formation[]=[
                     'tag'=>$formation->getTag(),
-                    //'id'=>$formation->getId(),
                     'candidatures'=>$candidatures_formation,
                     'nombre'=>$nombre,
                     'refus'=>$refus
@@ -159,7 +158,6 @@ class AffichageController extends AbstractController
                 'reponse'=>$liste_reponses,
                 'formation'=>$liste_formations_candidature,
                 'delai_reponse'=>$delai_reponse,
-                //'id'=>$essai
             ];
             $response->setContent(json_encode(
                 [ 
