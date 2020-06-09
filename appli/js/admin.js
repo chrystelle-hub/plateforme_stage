@@ -212,45 +212,10 @@ $(document).ready(function () {
                 'D\351sactiver</button>' +
                 '</div>' +
                 '</div>';
-              /*'<div class="candidatures_user">'+
-										'<h4>Candidatures</h4>'+
-										'</div>'*/
+        
               $(html).appendTo($('.user_activ2'));
 
-              /*candidatures.forEach(function(donnee){
-									var date_candidature = new Date(donnee['date'].date);
-									const options = {year: 'numeric', month: 'numeric', day: 'numeric'};
-									var date_candidature = date_candidature.toLocaleDateString("fr-FR", options);
-
-									if(donnee['etat'] === 0)
-									{
-										var etat = "En cours"
-									}
-									if(donnee['etat'] === 1)
-									{
-										var etat = "Fini"
-									}
-									var html2 =
-									
-											'<div class="user_candidature">'+
-												'<div>'+
-													'<label style="color:#e3007e;font-size:14px;">Entreprise</label>'+
-													'<p>'+donnee['entreprise']+'</p>'+
-												'</div>'+
-												'<div>'+
-													'<label style="color:#e3007e;font-size:14px;">Date candidature</label>'+
-													'<p>'+date_candidature+'</p>'+
-												'</div>'+
-												'<div>'+
-													'<label style="color:#e3007e;font-size:14px;">Etat</label>'+
-													'<p>'+etat+'</p>'+
-												'</div>'+
-											'</div>'	
-									
-
-								$(html2).appendTo($('.user_activ2'));
-
-							})*/
+            
             }
           });
 
@@ -278,9 +243,7 @@ $(document).ready(function () {
                   $('#success').text("le compte n'est pas valid\351");
                 }
 
-                //console.log(data);
-                //alert(JSON.parse(data));
-                //alert(data);
+                
               })
               .always(function () {
                 console.log('end2');
@@ -311,9 +274,6 @@ $(document).ready(function () {
                   $('#success').text("le compte n'est pas desactiv\351");
                 }
 
-                //console.log(data);
-                //alert(JSON.parse(data));
-                //alert(data);
               })
               .always(function () {
                 console.log('end2');
@@ -321,8 +281,6 @@ $(document).ready(function () {
           });
 
           console.log(data);
-          //alert(JSON.parse(data));
-          //alert(data);
         })
         .always(function () {
           console.log('end2');
@@ -351,9 +309,6 @@ $(document).ready(function () {
               document.location.href = 'admin.html?token=' + token;
             }
 
-            //console.log(data);
-            //alert(JSON.parse(data));
-            //alert(data);
           })
           .always(function () {
             console.log('end2');
@@ -414,17 +369,13 @@ $(document).ready(function () {
               })
                 .done(function (data) {
                   document.location.href = 'admin.html?token=' + token;
-                  //console.log(data);
-                  //alert(JSON.parse(data));
-                  //alert(data);
+     
                 })
                 .always(function () {
                   console.log('end2');
                 });
             });
-            //console.log(data);
-            //alert(JSON.parse(data));
-            //alert(data);
+          
           })
           .always(function () {
             console.log('end2');
@@ -491,6 +442,6 @@ $(document).ready(function () {
         });
       });
 
-      //$("#footer").load("footer.html");
+      $("#footer").load("footer.html");
     });
 });

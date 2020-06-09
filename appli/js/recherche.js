@@ -101,7 +101,7 @@ $(document).ready(function () {
                   '<div class="stat_entreprise">' +
                   '<i class="fas fa-globe"></i>' +
                   '</div>' +
-                  '<a>'+element['ville']+'</a>' +
+                  '<a>'+element['ville'].toUpperCase()+'</a>' +
                   '</div>' +
                   '<div class="contenair_stat_entre">' +
                   '<div class="stat_entreprise">' +
@@ -149,6 +149,6 @@ $(document).ready(function () {
         });
       });
 
-      //$("#footer").load("footer.html");
+      $("#footer").load("footer.html");
     });
 });

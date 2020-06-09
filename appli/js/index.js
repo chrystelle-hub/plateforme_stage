@@ -36,6 +36,6 @@ $(document).ready(function () {
       $('#contenu').load('accueil.html', function () {
         //action spécifiques
       });
-      //$("#footer").load("footer.html");
+      $("#footer").load("footer.html");
     });
 });
