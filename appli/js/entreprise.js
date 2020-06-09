@@ -131,7 +131,7 @@ $(document).ready(function () {
             $('#taux').text(taux + '%');
             $('#delai').text(candidatures['delai_reponse']);
             $('#accept').text(candidatures['reponse']['accepte']);
-            $('#attente').text(candidatures['etat']['encours']);
+            $('#attente').text(candidatures['reponse']['en attente']+candidatures['reponse']['entretien en attente de reponse']);
             $('#refus').text(
               candidatures['reponse']['refuse apres entretien'] +
                 candidatures['reponse']['refuse sans entretien']
@@ -195,106 +195,106 @@ $(document).ready(function () {
               $(html).appendTo($('#contact'));
             });
             let candidatures_formation =
-              data['liste_candidature'][0]['formation'];
+              data['liste_formation'];
             candidatures_formation.forEach(function (element) {
               let refus =
-                element['reponse']['refuse apres entretien'] +
-                element['reponse']['refuse sans entretien'];
+                element.refus[0].refus;
+          
               let html2 =
                 '<div id="contenair_contact"  class="ligne_contact dylan_js">' +
-                '<div  class="name_ligne_contact">' +
-                '<p>' +
-                element['tag'] +
-                '</p>' +
-                '<i class="fas fa-location-arrow"></i>' +
+                  '<div  class="name_ligne_contact">' +
+                  '<p>' +
+                  element['tag'] +
+                  '</p>' +
+                  '<i class="fas fa-location-arrow"></i>' +
                 '</div>' +
                 '<div id="modif" class="info_ligne_contact cache_info" style="display: flex; flex-direction: column;">' +
-                '<div class="stat_contenaire">' +
-                '<div class="stat_1">' +
-                '<div class="stat_classique">' +
-                '<p>' +
-                element['nb'] +
-                '</p>' +
-                '</div>' +
-                '<label>Candidatures</label>' +
-                '</div>' +
-                '<div class="stat_1">' +
-                '<div class="stat_classique">' +
-                '<p>' +
-                element['etat']['encours'] +
-                '</p>' +
-                '</div>' +
-                '<label>En cours</label>' +
-                '</div>' +
-                '<div class="stat_1">' +
-                '<div class="stat_classique">' +
-                '<p>' +
-                element['reponse']['accepte'] +
-                '</p>' +
-                '</div>' +
-                '<label>Accept\351es</label>' +
-                '</div>' +
-                '<div class="stat_1">' +
-                '<div class="stat_classique">' +
-                '<p>' +
-                refus +
-                '</p>' +
-                '</div>' +
-                '<label>Refus\351es</label>' +
-                '</div>' +
-                '</div><br><hr>' +
-                '<div id="modif" class="info_ligne_contact" >' +
-                '<div class="icone_user">' +
+                  '<div class="stat_contenaire">' +
+                    '<div class="stat_1">' +
+                      '<div class="stat_classique">' +
+                        '<p>' +
+                         element.nombre[0].nb +
+                        '</p>' +
+                      '</div>' +
+                      '<label>Candidatures</label>' +
+                    '</div>' +
+                    '<div class="stat_1">' +
+                      '<div class="stat_classique">' +
+                        '<p>' +
+                        element.candidatures.etat['En cours'][0].EnCours +
+                        '</p>' +
+                      '</div>' +
+                      '<label>En cours</label>' +
+                    '</div>' +
+                    '<div class="stat_1">' +
+                      '<div class="stat_classique">' +
+                        '<p>' +
+                        element.candidatures.reponse.accept[0].Accept +
+                        '</p>' +
+                      '</div>' +
+                      '<label>Accept\351es</label>' +
+                    '</div>' +
+                    '<div class="stat_1">' +
+                      '<div class="stat_classique">' +
+                        '<p>' +
+                        refus +
+                        '</p>' +
+                      '</div>' +
+                      '<label>Refus\351es</label>' +
+                    '</div>' +
+                  '</div><br><hr>' +
+                '<div id="modif" class="info_ligne_contact" style="justify-content:space-between;" >' +
+                '<div class="icone_user" style="display:flex; align-items:center;">' +
                 '<ul>' +
                 '<li>Lettre</li>' +
                 '<li>Email</li>' +
-                '<li>Telephone</li>' +
-                '<li>sur place</li>' +
+                '<li>T\351l\351phone</li>' +
+                '<li>Sur place</li>' +
                 '</ul>' +
                 '</div>' +
-                '<div class="icone_text">' +
+                '<div class="icone_text" style="display:flex; align-items:center;">' +
                 '<ul>' +
                 '<li id="CandidatureLettre">' +
-                element['moyen']['lettre'] +
+                element.candidatures.moyen.lettre[0].lettre +
                 '</li>' +
                 '<li id="CandidatureEmail">' +
-                element['moyen']['email'] +
+                element.candidatures.moyen.email[0].email +
                 '</li>' +
                 '<li id="CandidatureTelephone">' +
-                element['moyen']['telephone'] +
+                element.candidatures.moyen.tel[0].tel +
                 '</li>' +
                 '<li id="CandidaturePlace">' +
-                element['moyen']['sur place'] +
+                element.candidatures.moyen['sur place'][0].place +
                 '</li>' +
                 '</ul>' +
                 '</div>' +
                 '</div>' +
-                '<div><div id="modif" class="info_ligne_contact" >' +
-                '<div class="icone_user">' +
+                '<div><div id="modif" class="info_ligne_contact" style="justify-content:space-between;" >' +
+                '<div class="icone_user" style="display:flex; align-items:center;">' +
                 '<ul>' +
                 '<li>En attente</li>' +
                 '<li>Entretien en attente de r\351ponse</li>' +
-                '<li>Refus apr\350s entretien</li>' +
-                '<li>Refus sans entretien</li>' +
+                '<li>Refus\351 apr\350s entretien</li>' +
+                '<li>Refus\351 sans entretien</li>' +
                 '<li>Accept\351</li>' +
                 '</ul>' +
                 '</div>' +
-                '<div class="icone_text">' +
+                '<div class="icone_text" style="display:flex; align-items:center;">' +
                 '<ul>' +
                 '<li id="Candidature1">' +
-                element['reponse']['en attente'] +
+                element.candidatures.reponse['en attente'][0].EnAttente+
                 '</li>' +
                 '<li id="Candidature2">' +
-                element['reponse']['entretien en attente de reponse'] +
+                element.candidatures.reponse['entretien en attente de reponse'][0].EnAttente +
                 '</li>' +
                 '<li id="Candidature3">' +
-                element['reponse']['refuse apres entretien'] +
+                element.candidatures.reponse['refus après entretien'][0].refus +
                 '</li>' +
                 '<li id="Candidature4">' +
-                element['reponse']['refuse sans entretien'] +
+                element.candidatures.reponse['refus sans entretien'][0].refus +
                 '</li>' +
                 '<li id="Candidature5">' +
-                element['reponse']['accepte'] +
+                element.candidatures.reponse.accept[0].Accept +
                 '</li>' +
                 '</ul>' +
                 '</div></div>' +
@@ -304,11 +304,14 @@ $(document).ready(function () {
 
               $(html2).appendTo($('#candidatureFormation'));
             });
+            
             let formations = data['liste_formation'];
             formations.forEach(function (element) {
-              let html3 = '<p>' + element['tag'] + '</p>';
+              let html3 = '<p>' + element['tag'] +'</p>';
               $(html3).appendTo($('#listeFormations'));
+              
             });
+
             let historique = Object.entries(entreprise_infos['historique']);
             historique.forEach(function (element) {
               var date = new Date(element[0]);

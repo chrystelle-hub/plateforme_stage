@@ -53,7 +53,7 @@ $(document).ready(function () {
           dataType: 'json',
           crossDomain: true,
         }).done(function (data) {
-          console.log($('#stageModif').val());
+          //console.log($('#stageModif').val());
           if (data['modif'] === 'ok') {
             document.location.href = 'profil.html?token=' + token;
           } else {
@@ -101,8 +101,8 @@ $(document).ready(function () {
             var role = data.user[0].role[0];
 
             if (role !== 'ROLE_ADMIN') {
-              $('#liStage').css('display', 'inline');
-              $('#stage').css('display', 'inline');
+              $('#liStage').css('display', 'block');
+              $('#stage').css('display', 'block');
               $('#stageModif').css('display', 'inline');
             }
 

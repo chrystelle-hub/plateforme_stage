@@ -13,7 +13,9 @@ padding: 0;
 display : table;
 width: 100%;
 }
-
+ul {
+    list-style: none;
+}
 /* HEADER */
 
 .containerHeader {
@@ -712,6 +714,10 @@ input[type="search"]:focus{
     display: flex;
     justify-content: space-around;
     padding: 15px;
+}
+#modif.info_ligne_contact {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .icone_user li{
     font-size: 20px;
