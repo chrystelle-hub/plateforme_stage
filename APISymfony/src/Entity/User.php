@@ -93,6 +93,11 @@ class User implements UserInterface
      */
     private $stage;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $token;
+
     public function __construct()
     {
         $this->formation = new ArrayCollection();
@@ -318,6 +323,18 @@ class User implements UserInterface
     public function setStage(int $stage): self
     {
         $this->stage = $stage;
+
+        return $this;
+    }
+
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    public function setToken(?string $token): self
+    {
+        $this->token = $token;
 
         return $this;
     }
