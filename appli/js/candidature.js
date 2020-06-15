@@ -60,11 +60,11 @@ $(document).ready(function () {
           var etat = 'fini';
         }
 
-        if (data['candidature'].moyen === 0) {
+        if (data['candidature'].moyen === "0") {
           var moyen = 'lettre';
-        } else if (data['candidature'].moyen === 1) {
+        } else if (data['candidature'].moyen === "1") {
           var moyen = 'email';
-        } else if (data['candidature'].moyen === 2) {
+        } else if (data['candidature'].moyen === "2") {
           var moyen = 't\351l\351phone';
         } else {
           var moyen = 'sur place';

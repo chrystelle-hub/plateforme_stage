@@ -638,12 +638,25 @@ input[type="search"]:focus{
 .entreprise:hover .name_entreprise i {
     color: #87bb34;
 }
+
 /**PAGE ENTREPRISE**/
+
+#page_entreprise {
+    display: flex;
+}
 
 #entreprise_supp .mes_infos
 {
     width:60vw !important;
     margin-left:20%;
+}
+
+.entreprise_candidatures{
+    width: 20%; 
+    margin-right:20px;
+    margin-left:20px;
+    margin-bottom:20px;
+    margin-top:50px;
 }
 
 .entreprise_contenair {
@@ -730,6 +743,9 @@ input[type="search"]:focus{
     justify-content: space-around;
     padding: 15px;
 }
+#modif {
+    display: flex;
+}
 #modif.info_ligne_contact {
     margin-left: 5%;
     margin-right: 5%;
@@ -766,11 +782,7 @@ input[type="search"]:focus{
     margin-top: 0px;
     transition: 0.2s;
 }
-.photo_2{
-    background: url("../image/fond_enter.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 .info_entreprise{
     position: absolute;
 
@@ -1448,5 +1460,186 @@ ul.candidature_detail {
 
 	100%{
 		background-color:#17a2b8;
+	}
+}
+
+/****/
+
+#fountainG{
+	position:relative;
+	width:114px;
+	height:14px;
+	margin:auto;
+}
+
+.fountainG{
+	position:absolute;
+	top:0;
+	background-color:rgb(0,0,0);
+	width:14px;
+	height:14px;
+	animation-name:bounce_fountainG;
+		-o-animation-name:bounce_fountainG;
+		-ms-animation-name:bounce_fountainG;
+		-webkit-animation-name:bounce_fountainG;
+		-moz-animation-name:bounce_fountainG;
+	animation-duration:1.235s;
+		-o-animation-duration:1.235s;
+		-ms-animation-duration:1.235s;
+		-webkit-animation-duration:1.235s;
+		-moz-animation-duration:1.235s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	transform:scale(.3);
+		-o-transform:scale(.3);
+		-ms-transform:scale(.3);
+		-webkit-transform:scale(.3);
+		-moz-transform:scale(.3);
+	border-radius:9px;
+		-o-border-radius:9px;
+		-ms-border-radius:9px;
+		-webkit-border-radius:9px;
+		-moz-border-radius:9px;
+}
+
+#fountainG_1{
+	left:0;
+	animation-delay:0.496s;
+		-o-animation-delay:0.496s;
+		-ms-animation-delay:0.496s;
+		-webkit-animation-delay:0.496s;
+		-moz-animation-delay:0.496s;
+}
+
+#fountainG_2{
+	left:14px;
+	animation-delay:0.6125s;
+		-o-animation-delay:0.6125s;
+		-ms-animation-delay:0.6125s;
+		-webkit-animation-delay:0.6125s;
+		-moz-animation-delay:0.6125s;
+}
+
+#fountainG_3{
+	left:28px;
+	animation-delay:0.739s;
+		-o-animation-delay:0.739s;
+		-ms-animation-delay:0.739s;
+		-webkit-animation-delay:0.739s;
+		-moz-animation-delay:0.739s;
+}
+
+#fountainG_4{
+	left:43px;
+	animation-delay:0.8655s;
+		-o-animation-delay:0.8655s;
+		-ms-animation-delay:0.8655s;
+		-webkit-animation-delay:0.8655s;
+		-moz-animation-delay:0.8655s;
+}
+
+#fountainG_5{
+	left:57px;
+	animation-delay:0.992s;
+		-o-animation-delay:0.992s;
+		-ms-animation-delay:0.992s;
+		-webkit-animation-delay:0.992s;
+		-moz-animation-delay:0.992s;
+}
+
+#fountainG_6{
+	left:71px;
+	animation-delay:1.1085s;
+		-o-animation-delay:1.1085s;
+		-ms-animation-delay:1.1085s;
+		-webkit-animation-delay:1.1085s;
+		-moz-animation-delay:1.1085s;
+}
+
+#fountainG_7{
+	left:85px;
+	animation-delay:1.235s;
+		-o-animation-delay:1.235s;
+		-ms-animation-delay:1.235s;
+		-webkit-animation-delay:1.235s;
+		-moz-animation-delay:1.235s;
+}
+
+#fountainG_8{
+	left:100px;
+	animation-delay:1.3615s;
+		-o-animation-delay:1.3615s;
+		-ms-animation-delay:1.3615s;
+		-webkit-animation-delay:1.3615s;
+		-moz-animation-delay:1.3615s;
+}
+
+
+
+@keyframes bounce_fountainG{
+	0%{
+	transform:scale(1);
+		background-color:rgb(135,187,52);
+	}
+
+	100%{
+	transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes bounce_fountainG{
+	0%{
+	-o-transform:scale(1);
+		background-color:rgb(135,187,52);
+	}
+
+	100%{
+	-o-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes bounce_fountainG{
+	0%{
+	-ms-transform:scale(1);
+		background-color:rgb(135,187,52);
+	}
+
+	100%{
+	-ms-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes bounce_fountainG{
+	0%{
+	-webkit-transform:scale(1);
+		background-color:rgb(135,187,52);
+	}
+
+	100%{
+	-webkit-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes bounce_fountainG{
+	0%{
+	-moz-transform:scale(1);
+		background-color:rgb(135,187,52);
+	}
+
+	100%{
+	-moz-transform:scale(.3);
+		background-color:rgb(255,255,255);
 	}
 }
