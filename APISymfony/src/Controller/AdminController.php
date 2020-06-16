@@ -89,10 +89,17 @@ class AdminController extends AbstractController
                     'etat'=>$candidature->getEtat(),
                 ];
             }*/
+            $formations = $formation_user->getFormation();
+            $formations_liste = [];
+            foreach($formations as $formation)
+            {
+                $formations_liste[]=$formation->getTag();
+            }
             $liste_users[] = [
                 'id' => $formation_user->getId(),
                 'nom' => $formation_user->getNom(),
                 'prenom'=> $formation_user->getPrenom(),
+                'formation'=>$formations_liste,
                 'date_creation_password'=> $formation_user->getDateCreationPassword(),
                 'etat_compte'=>$formation_user->getEtatCompte(),
                 'roles'=>$formation_user->getRoles(),

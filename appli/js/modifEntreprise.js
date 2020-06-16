@@ -87,6 +87,14 @@ $(document).ready(function () {
       });
 
       $('#buttonModif').click(function () {
+        $(document).ajaxStart(function () {
+          $('#fountainG').css('display', 'block');
+          $('#modif').css('display', 'none');
+        });
+        $(document).ajaxComplete(function () {
+          $('#fountainG').css('display', 'none');
+          $('#modif').css('display', 'block');
+        });
         $.ajax({
           url: 'https://127.0.0.1:8000/modif/entreprise',
 

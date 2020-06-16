@@ -28,6 +28,13 @@
             <h2>Modifier Contact</h2>
         </div>
 
+        <div id="erreurNom"></div>
+        <div class="form-group">
+            <label for="nom_contact">Nom :</label>
+            <input class="form-control" type="text" id="nom_contact" name="fonction_contact" placeholder="Nom"
+                required>
+        </div>
+
         <div id="erreurFonction"></div>
         <div class="form-group">
             <label for="fonction_contact">Fonction :</label>
@@ -55,7 +62,21 @@
                 placeholder="Linkedin">
         </div>
 
-        <button type="submit" id="buttonAjout" class="btn btn-info btn-block">Modifier</button>
+        <button type="submit" id="buttonAjout" class="btn btn-info btn-block">
+            <span id="modif" style="display: block;">
+            Modifier
+            </span>
+            <div id="fountainG" style="display: none;">
+                <div id="fountainG_1" class="fountainG"></div>
+                <div id="fountainG_2" class="fountainG"></div>
+                <div id="fountainG_3" class="fountainG"></div>
+                <div id="fountainG_4" class="fountainG"></div>
+                <div id="fountainG_5" class="fountainG"></div>
+                <div id="fountainG_6" class="fountainG"></div>
+                <div id="fountainG_7" class="fountainG"></div>
+                <div id="fountainG_8" class="fountainG"></div>
+            </div>
+        </button>
 
     </div>
 

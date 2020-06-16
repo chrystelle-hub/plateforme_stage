@@ -204,13 +204,19 @@ $(document).ready(function () {
                 stage +
                 '</p>' +
                 '</div>' +
-                '<div class="div_accept">' +
+                '<div>' +
+                '<label>Formation</label>' +
+                '<p id="date_creation">' +
+                element['formation'] +
+                '</p>' +
+                '</div>' +
+                /*'<div class="div_accept">' +
                 '<button id="desactive" class="desactive">' +
                 '<input type="hidden" value=' +
                 element['id'] +
                 '>' +
                 'D\351sactiver</button>' +
-                '</div>' +
+                '</div>' +*/
                 '</div>';
         
               $(html).appendTo($('.user_activ2'));

@@ -50,6 +50,7 @@ $(document).ready(function () {
         .done(function (data) {
           var contact = data['contact'];
           $('#nom').text('Modification du contact : ' + contact['nom']);
+          $('#nom_contact').val(contact['nom']);
           $('#fonction_contact').val(contact['fonction']);
           $('#tel_contact').val(contact['tel']);
           $('#email_contact').val(contact['mail']);
@@ -61,6 +62,14 @@ $(document).ready(function () {
           );
         });
       $('#buttonAjout').click(function () {
+        $(document).ajaxStart(function () {
+          $('#fountainG').css('display', 'block');
+          $('#modif').css('display', 'none');
+        });
+        $(document).ajaxComplete(function () {
+          $('#fountainG').css('display', 'none');
+          $('#modif').css('display', 'block');
+        });
         $.ajax({
           url: 'https://127.0.0.1:8000/modif/contact',
 
@@ -68,6 +77,7 @@ $(document).ready(function () {
           data: {
             'X-AUTH-TOKEN': token,
             id: id,
+            nom:$('#nom_contact').val(),
             fonction: $('#fonction_contact').val(),
             tel: $('#tel_contact').val(),
             mail: $('#email_contact').val(),
@@ -77,6 +87,7 @@ $(document).ready(function () {
           dataType: 'json',
           crossDomain: true,
         }).done(function (data) {
+          $('#erreurNom').text('')
           $('#erreurEmail').text('');
           $('#erreurFonction').text('');
           $('#erreurLinkedin').text('');
@@ -85,6 +96,10 @@ $(document).ready(function () {
             document.location.href =
               'entreprise.html?token=' + token + '&id=' + data['id'];
           } else {
+            if (data['erreur']['nom']) {
+              $('#erreurEmail').addClass('alert alert-danger');
+              $('#erreurEmail').text(data['erreur']['nom'][0]);
+            }
             if (data['erreur']['email']) {
               $('#erreurEmail').addClass('alert alert-danger');
               $('#erreurEmail').text(data['erreur']['email'][0]);

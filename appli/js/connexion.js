@@ -28,9 +28,13 @@ $(document).ready(function () {
       $('#seconnecter').click(function () {
         $(document).ajaxStart(function () {
           $('#chargement').css('display', 'block');
+          $('#connexion_anim').css('display', 'none');
+       
         });
         $(document).ajaxComplete(function () {
           $('#chargement').css('display', 'none');
+          $('#connexion_anim').css('display', 'block');
+   
         });
         $.ajax({
           url: 'https://127.0.0.1:8000/login',
